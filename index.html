@@ -86,7 +86,32 @@ panel:{title:"Trinasolar Vertex S+ · TSM-NEG9R.28",image:"https://vertexsplus.t
 inverter:{title:"Hoymiles HMS-1000-2T",image:"https://www.hoymiles.com/statics/8/hoymiles/images/0f1_imgh1.png",category:"MICROINVERSOR · 1000 VA",description:"Microinversor monofásico 2 en 1. Cada unidad puede conectar hasta dos módulos y dispone de MPPT independiente por entrada.",rows:[["Potencia de salida","1000 VA"],["MPPT","2"],["Rango MPPT","16–60 V"],["Tensión máxima de entrada","65 V"],["Corriente máxima de entrada","2 × 16 A"],["Corriente máxima de cortocircuito","2 × 25 A"],["Eficiencia pico","96,5 %"],["Protección","IP67"],["Temperatura ambiente","−40 a +65 °C"],["Dimensiones","261 × 180 × 35,1 mm"]],source:"Ficha técnica oficial Hoymiles",url:"https://www.hoymiles.com/es/products/hms-600-700-800-900-1000-2t.html"},
 storage:{title:"EcoFlow DELTA Pro 3",image:"https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243872599_530x530.png?v=1724363006",category:"BACKUP · PORTABLE",description:"Estación de energía portátil con batería LFP, salida AC de alta potencia y dos entradas solares independientes.",rows:[["Capacidad","4096 Wh"],["Salida AC","4000 W máx."],["Sobretensión","8000 W"],["Entrada solar total","2600 W"],["Entrada solar HV","30–150 V / 15 A / 1600 W"],["Entrada solar LV","11–60 V / 20 A / 1000 W"],["Química","LFP"],["Ciclos","4000 ciclos hasta 80 %"],["Peso","51,5 kg"],["Dimensiones","693 × 341 × 410 mm"]],source:"Ficha oficial EcoFlow Europe",url:"https://eu.ecoflow.com/products/delta-pro-3-portable-power-station"}
 };
-function showProduct(k){const d=document.getElementById('productDetail'),p=products[k];let rows=p.rows.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>').join('');d.innerHTML='<div class="detail-grid"><div><img class="detail-image" src="'+p.image+'" alt="'+p.title+'" loading="lazy"></div><div><span class="tag">'+p.category+'</span><h3>'+p.title+'</h3><p>'+p.description+'</p><table class="specs"><tbody>'+rows+'</tbody></table><p class="source-note">Fuente: '+p.source+'. Verifica siempre la versión exacta y las condiciones locales antes de diseñar o comprar.</p><div class="product-actions"><a class="btn primary" href="'+p.url+'" target="_blank" rel="noopener noreferrer">Abrir fuente del fabricante ↗</a><button class="btn secondary" onclick="document.getElementById('productDetail').style.display='none'">Cerrar</button></div></div></div>';d.style.display='block';d.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function showProduct(k){
+  const d=document.getElementById('productDetail');
+  const p=products[k];
+  if(!d||!p)return;
+  const rows=p.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
+  d.innerHTML=`<div class="detail-grid">
+    <div><img class="detail-image" src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'"></div>
+    <div>
+      <span class="tag">${p.category}</span>
+      <h3>${p.title}</h3>
+      <p>${p.description}</p>
+      <table class="specs"><tbody>${rows}</tbody></table>
+      <p class="source-note">Fuente: ${p.source}. Verifica siempre la versión exacta y las condiciones locales antes de diseñar o comprar.</p>
+      <div class="product-actions">
+        <a class="btn primary" href="${p.url}" target="_blank" rel="noopener noreferrer">Abrir fuente del fabricante ↗</a>
+        <button class="btn secondary" type="button" onclick="closeProduct()">Cerrar</button>
+      </div>
+    </div>
+  </div>`;
+  d.style.display='block';
+  d.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function closeProduct(){
+  const d=document.getElementById('productDetail');
+  if(d)d.style.display='none';
+}
 function filterProducts(t){document.querySelectorAll('.product').forEach(x=>x.style.display=(t==='all'||x.dataset.type===t)?'block':'none');}
 function compareCategory(t){const r=document.getElementById('compareResult');let html='';if(t==='solar')html='<span class="tag">COMPARACIÓN SOLAR</span><h3>Paneles: qué mirar</h3><table class="compare-table"><tr><th>Variable</th><th>Por qué importa</th></tr><tr><td>Potencia</td><td>Capacidad nominal del módulo bajo STC.</td></tr><tr><td>Vmp / Imp</td><td>Determinan el punto de operación y ayudan a revisar compatibilidad.</td></tr><tr><td>Voc / Isc</td><td>Se usan para comprobar límites eléctricos y criterios de diseño/protección.</td></tr></table><p class="compare-note">En una comparación real, EnerVanty debe enfrentar modelos concretos con datos de sus fichas oficiales.</p>';if(t==='inverter')html='<span class="tag">COMPARACIÓN INVERSORES</span><h3>Inversores: compatibilidad antes que apariencia</h3><table class="compare-table"><tr><th>Variable</th><th>Qué revisar</th></tr><tr><td>Potencia AC</td><td>Capacidad nominal de salida.</td></tr><tr><td>V DC máxima</td><td>No debe superarse con la tensión máxima del campo FV.</td></tr><tr><td>Rango MPPT</td><td>Debe cubrir la tensión de operación del string.</td></tr><tr><td>Corriente MPPT</td><td>Debe admitir la corriente prevista del arreglo.</td></tr><tr><td>N.º MPPT / entradas</td><td>Define cómo pueden organizarse los strings.</td></tr></table>';if(t==='storage')html='<span class="tag">COMPARACIÓN STORAGE</span><h3>Almacenamiento: energía no es lo mismo que potencia</h3><table class="compare-table"><tr><th>Variable</th><th>Qué significa</th></tr><tr><td>Capacidad (kWh)</td><td>Cuánta energía puede almacenar.</td></tr><tr><td>Potencia (kW)</td><td>Cuánta potencia puede entregar o absorber.</td></tr><tr><td>Entrada solar</td><td>Potencia, tensión y corriente máximas aceptadas.</td></tr><tr><td>Expansión</td><td>Posibilidad de añadir baterías o módulos.</td></tr><tr><td>Química / ciclos</td><td>Características relevantes para uso y vida útil.</td></tr></table>';r.innerHTML=html;r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'nearest'});}
 </script>
