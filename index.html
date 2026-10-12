@@ -1,121 +1,226 @@
+
 <!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' http://classic.avantlink.com; connect-src 'self'; base-uri 'self'; form-action 'self';">
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="EnerVanty: información, comparativas y soluciones de energía solar, almacenamiento y respaldo.">
-<meta name="version" content="EnerVanty V5.2">
-<title>EnerVanty | Energy • Technology • Solutions</title>
+<meta name="description" content="EnerVanty: revista comercial, catálogo y soluciones de energía solar y tecnología.">
+<title>EnerVanty | Energía, Tecnología y Soluciones</title>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:#111827;background:#f7f9fc;line-height:1.6}
-a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 1px 8px #00000012}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800;font-size:1.3rem;display:flex;align-items:center;gap:10px}.mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#18b7d6,#6b5cff)}
-.links{display:flex;gap:25px;font-size:.9rem;color:#566070}.links a:hover{color:#111827}
-.hero{background:linear-gradient(135deg,#fff,#eefaff);padding:85px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
-.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:#079db8}.hero h1{font-size:clamp(3rem,7vw,5.7rem);line-height:1.02;letter-spacing:-.055em;margin:14px 0}.hero h1 span{color:#6b5cff}
-.hero p{max-width:650px;color:#667085;font-size:1.08rem}.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{padding:13px 19px;border-radius:12px;font-weight:700}.primary{background:#111827;color:#fff}.secondary{background:#fff;border:1px solid #d9dee7}
-.visual{min-height:390px;border-radius:30px;background:linear-gradient(145deg,#0d1527,#20234a);position:relative;overflow:hidden;box-shadow:0 25px 70px #1118272b}
-.orbit{position:absolute;width:360px;height:360px;border:1px solid #ffffff24;border-radius:50%;right:-100px;top:-70px}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #18b7d633;border-radius:50%}.orbit:before{inset:40px}.orbit:after{inset:90px}
-.visual-text{position:absolute;left:35px;bottom:35px;color:#fff}.visual-text small{color:#7ce4f0;font-weight:800;letter-spacing:.15em}.visual-text strong{display:block;font-size:2.5rem;line-height:1.03;margin-top:12px}
-section{padding:85px 0}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0}.head p{max-width:500px;color:#667085}
-.cards,.guides,.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card,.guide{background:#fff;border:1px solid #e5e9f0;border-radius:20px;padding:28px}.icon{width:48px;height:48px;border-radius:14px;background:#eefaff;display:grid;place-items:center;color:#079db8;font-size:1.3rem;margin-bottom:22px}.card h3,.guide h3{margin:0;font-size:1.25rem;letter-spacing:-.035em}.card p,.guide p{color:#667085}.tag{font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6b5cff}
-.solar-focus{background:#f7fbfd}.solar-focus .card{position:relative}.solar-focus .card a{display:inline-block;margin-top:10px}.solar-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.solar-steps>div{background:#fff;border:1px solid #e5e9f0;border-radius:16px;padding:20px}.solar-steps b{display:block;color:#079db8;font-size:.78rem;letter-spacing:.1em}.solar-steps strong{display:block;margin:8px 0 4px}.solar-steps span{display:block;color:#667085;font-size:.9rem}.dark{background:#0c1220;color:#fff}.dark .head p,.dark .process p{color:#aab4c7}.dark .eyebrow{color:#72dce9}.process>div{border-top:1px solid #ffffff20;padding-top:18px}.process b{color:#72dce9}
-.about{background:#eef2f7}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.about p{color:#566070}
-footer{background:#0a0f19;color:#dbe2ef;padding:45px 0 22px}.foot{display:flex;justify-content:space-between;gap:25px}.foot small{color:#7f8a9d}.foot-bottom{border-top:1px solid #ffffff15;margin-top:30px;padding-top:18px;color:#737f94;font-size:.75rem}
-@media(max-width:800px){.links{display:none}.hero{padding:60px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.visual{min-height:300px}.cards,.guides,.process,.solar-steps{grid-template-columns:1fr}.head{display:block}.head p{margin-top:15px}.foot{display:block}.foot-bottom{line-height:1.7}}
-
-.product-card{overflow:hidden}.product-image{width:100%;height:190px;object-fit:contain;background:#f5f8fb;border-radius:14px;margin-bottom:18px;padding:14px}.product-meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.chip{font-size:.68rem;font-weight:800;letter-spacing:.06em;background:#f1f5f9;border-radius:999px;padding:6px 9px;color:#475467}.product-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.product-detail{display:none;margin-top:22px}.detail-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}.detail-image{width:100%;max-height:330px;object-fit:contain;background:#f5f8fb;border-radius:18px;padding:18px}.specs{width:100%;border-collapse:collapse;margin:16px 0}.specs td{padding:10px 8px;border-bottom:1px solid #e5e9f0}.specs td:first-child{font-weight:700;color:#344054;width:48%}.source-note{font-size:.78rem;color:#667085}.compare-table{width:100%;border-collapse:collapse;margin-top:16px}.compare-table th,.compare-table td{padding:11px 8px;border-bottom:1px solid #e5e9f0;text-align:left}.compare-table th{font-size:.78rem;letter-spacing:.04em;color:#475467}.compare-note{font-size:.86rem;color:#667085;margin-top:14px}@media(max-width:800px){.detail-grid{grid-template-columns:1fr}.product-image{height:170px}.detail-image{max-height:260px}.compare-table{font-size:.86rem}}
+:root{--ink:#172033;--muted:#667085;--blue:#13a9c4;--violet:#6857e8;--bg:#f6f8fc;--line:#e2e7ef}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+nav{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:12px 0}
+.brand{font-size:1.35rem;font-weight:800}
+.brand span{color:var(--blue)}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}
+.links a:hover{color:var(--blue)}
+.hero{padding:75px 0;background:linear-gradient(125deg,#fff,#eafaff)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.eyebrow{font-size:.76rem;letter-spacing:2px;font-weight:bold;color:#078da8}
+h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:14px 0}
+h1 span{color:var(--violet)}
+p{color:var(--muted)}
+.hero-art{background:linear-gradient(145deg,#101a30,#303265);color:white;border-radius:26px;padding:35px;min-height:260px;display:flex;flex-direction:column;justify-content:end}
+.hero-art strong{font-size:2rem;line-height:1.15}
+.btn{display:inline-block;padding:12px 17px;border-radius:10px;font-weight:bold;background:var(--ink);color:white;border:0;cursor:pointer}
+.btn-light{background:white;color:var(--ink);border:1px solid var(--line)}
+section{padding:65px 0}
+.section-head{margin-bottom:25px}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:24px;background:white;border:1px solid var(--line);border-radius:18px}
+.card h3{margin:10px 0}
+.symbol{font-size:2rem}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+.tab{padding:11px 18px;border:1px solid var(--line);border-radius:30px;background:white;font-weight:bold;cursor:pointer}
+.tab[aria-selected=true]{background:var(--ink);color:white}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.product{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
+.product-art{height:150px;border-radius:12px;background:linear-gradient(140deg,#eafaff,#f0edff);display:grid;place-items:center;font-size:3.5rem;margin-bottom:15px}
+.product h3{margin:5px 0}
+.product .btn{margin-top:auto;text-align:center}
+.notice{font-size:.86rem;background:#eef3f9;border-radius:12px;padding:14px}
+.panel[hidden]{display:none}
+footer{background:#121b2e;color:white;padding:35px 0}
+footer p{color:#c7cfdd;font-size:.9rem}
+@media(max-width:760px){.hero-grid,.cards,.gallery{grid-template-columns:1fr}.hero{padding:48px 0}.hero-art{min-height:190px}section{padding:45px 0}.links{gap:12px}.product-art{height:125px}}
 </style>
-<script type="text/javascript" src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=76175a2ac1f27597fefad89473b778d5b567854f"></script>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#"><span class="mark">E</span>EnerVanty</a>
-<nav class="links"><a href="#solar-hub">Solar</a><a href="#products">Productos</a><a href="#compare">Comparar</a><a href="#guides">Guías</a><a href="#about">Nosotros</a></nav>
-</div></header>
+<header>
+<div class="wrap">
+<nav>
+<a class="brand" href="#inicio">Ener<span>Vanty</span></a>
+<div class="links">
+<a href="#energia">Energía solar</a>
+<a href="#catalogo">Catálogo</a>
+<a href="#tiendas">Tiendas</a>
+<a href="#guias">Guías</a>
+</div>
+</nav>
+</div>
+</header>
 
 <main>
-<section class="hero"><div class="wrap hero-grid">
-<div><span class="eyebrow">ENERGY • TECHNOLOGY • SOLUTIONS</span>
-<h1>Entiende la energía.<br><span>Elige mejor.</span></h1>
-<p>Información técnica clara, comparativas y soluciones de energía solar, almacenamiento y respaldo para tomar decisiones con criterio.</p>
-<div class="buttons"><a class="btn primary" href="#solutions">Explorar soluciones</a><a class="btn secondary" href="#guides">Ver guías</a></div></div>
-<div class="visual"><div class="orbit"></div><div class="visual-text"><small>ENERVANTY</small><strong>Energy<br>Technology<br>Solutions</strong></div></div>
-</div></section>
-
-<section id="solutions"><div class="wrap"><div class="head"><div><span class="eyebrow">SOLUCIONES</span><h2>Explora por necesidad</h2></div><p>No necesitas ser ingeniero para entender qué necesitas. Empezamos por lo esencial.</p></div>
-<div class="cards">
-<article class="card" id="solar"><div class="icon">☀</div><h3>Energía solar</h3><p>Paneles, inversores, protecciones, cableado y conceptos fundamentales de sistemas fotovoltaicos.</p></article>
-<article class="card" id="storage"><div class="icon">▣</div><h3>Almacenamiento</h3><p>Baterías y sistemas de almacenamiento para respaldo, autonomía y gestión de energía.</p></article>
-<article class="card" id="portable"><div class="icon">⚡</div><h3>Energía portátil</h3><p>Estaciones de energía, respaldo portátil y soluciones solares para hogar, trabajo y movilidad.</p></article>
-</div></div></section>
-
-<section class="solar-focus" id="solar-hub"><div class="wrap"><div class="head"><div><span class="eyebrow">SOLAR</span><h2>Empieza por el sistema.</h2></div><p>Antes de elegir un producto, entiende cómo encajan paneles, inversor, protección y almacenamiento.</p></div>
-<div class="cards">
-<article class="card"><div class="icon">▦</div><span class="tag">GENERACIÓN</span><h3>Paneles solares</h3><p>Potencia, Vmp, Imp, Voc e Isc: las especificaciones que realmente importan al comparar módulos.</p><a class="tag" href="#guides">Aprender primero →</a></article>
-<article class="card"><div class="icon">≈</div><span class="tag">CONVERSIÓN</span><h3>Inversores</h3><p>Potencia AC, rango MPPT, corriente máxima y tensión DC: claves para comprobar compatibilidad.</p><a class="tag" href="#guides">Ver conceptos →</a></article>
-<article class="card"><div class="icon">◇</div><span class="tag">PROTECCIÓN</span><h3>Protecciones y cableado</h3><p>Fusibles, seccionamiento, SPD, conductores y caída de tensión forman parte del sistema, no son accesorios aislados.</p><a class="tag" href="#guides">Entender la protección →</a></article>
+<section class="hero" id="inicio">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow">ENERGÍA · TECNOLOGÍA · SOLUCIONES</span>
+<h1>Ideas inteligentes.<br><span>Soluciones reales.</span></h1>
+<p>Una revista comercial para explorar tecnología, energía solar, equipos eléctricos y soluciones prácticas para el hogar y la empresa.</p>
+<a class="btn" href="#tiendas">Explorar productos</a>
+<a class="btn btn-light" href="#guias">Leer nuestras guías</a>
 </div>
-<div class="solar-steps"><div><b>01</b><strong>Define la necesidad</strong><span>Consumo, potencia, autonomía y entorno.</span></div><div><b>02</b><strong>Dimensiona</strong><span>Paneles, strings, MPPT, inversor y conductores.</span></div><div><b>03</b><strong>Compara</strong><span>Precio, prestaciones, compatibilidad y garantía.</span></div><div><b>04</b><strong>Compra con criterio</strong><span>Te conectamos con la oferta disponible.</span></div></div>
-</div></section>
+<div class="hero-art">
+<span class="eyebrow">ENERVANTY</span>
+<strong>La tecnología que impulsa tu futuro.</strong>
+<p>Información, productos y herramientas para elegir mejor.</p>
+</div>
+</div>
+</section>
 
-<section id="products" class="solar-focus"><div class="wrap"><div class="head"><div><span class="eyebrow">PRODUCTOS ENERVANTY</span><h2>Empieza con soluciones reales.</h2></div><p>Explora productos, entiende sus datos principales y abre la ficha antes de decidir.</p></div>
-<div class="product-toolbar" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px"><button class="btn secondary" onclick="filterProducts('all')">Todos</button><button class="btn secondary" onclick="filterProducts('solar')">Solar</button><button class="btn secondary" onclick="filterProducts('inverter')">Inversores</button><button class="btn secondary" onclick="filterProducts('storage')">Almacenamiento</button></div>
+<section id="energia">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">ÁREAS DE INTERÉS</span>
+<h2>Explora nuestras categorías</h2>
+<p>Contenido orientado a la selección práctica de equipos y soluciones tecnológicas.</p>
+</div>
 <div class="cards">
-<article class="card product product-card" data-type="solar"><img class="product-image" decoding="async" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%2272%22%20y%3D%2245%22%20width%3D%22276%22%20height%3D%22190%22%20rx%3D%2210%22%20fill%3D%22%2314213d%22%20stroke%3D%22%236b5cff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20stroke%3D%22%234c6aa8%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M141%2045v190M210%2045v190M279%2045v190%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M72%2092h276M72%20139h276M72%20186h276%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M210%20235l-18%2028h36z%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3ETrinasolar%20Vertex%20S%2B%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%20450%20W%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E" alt="Panel solar Trinasolar Vertex S+" loading="lazy"><span class="tag">PANEL SOLAR · 450 W</span><h3>Trinasolar Vertex S+</h3><p>N-type i-TOPCon. Módulo residencial de doble vidrio.</p><div class="product-meta"><span class="chip">450 W</span><span class="chip">Voc 52,9 V</span><span class="chip">Isc 10,74 A</span></div><div class="product-actions"><button class="btn secondary" onclick="showProduct('panel')">Ver ficha técnica</button><a class="btn primary" href="https://vertexsplus.trinasolar.com/es/" target="_blank" rel="noopener noreferrer">Ver fabricante</a></div></article>
-<article class="card product product-card" data-type="inverter"><img class="product-image" decoding="async" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%2282%22%20y%3D%2272%22%20width%3D%22256%22%20height%3D%22135%22%20rx%3D%2222%22%20fill%3D%22%23e9edf3%22%20stroke%3D%22%23596579%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22108%22%20y%3D%2298%22%20width%3D%22204%22%20height%3D%2234%22%20rx%3D%228%22%20fill%3D%22%231a2335%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22132%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22166%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22300%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M210%20207v30M190%20237h40%22%20stroke%3D%22%23596579%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3EHoymiles%20HMS-1000-2T%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%202%20MPPT%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E" alt="Microinversor Hoymiles HMS-1000-2T" loading="lazy"><span class="tag">MICROINVERSOR</span><h3>Hoymiles HMS-1000-2T</h3><p>Microinversor 2 en 1 para hasta dos módulos, con MPPT independiente.</p><div class="product-meta"><span class="chip">1000 VA</span><span class="chip">2 MPPT</span><span class="chip">IP67</span></div><div class="product-actions"><button class="btn secondary" onclick="showProduct('inverter')">Ver ficha técnica</button><a class="btn primary" href="https://www.hoymiles.com/es/products/hms-600-700-800-900-1000-2t.html" target="_blank" rel="noopener noreferrer">Ver fabricante</a></div></article>
-<article class="card product product-card" data-type="storage"><img class="product-image" decoding="async" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22105%22%20y%3D%2248%22%20width%3D%22220%22%20height%3D%22210%22%20rx%3D%2228%22%20fill%3D%22%23202a3d%22%20stroke%3D%22%236b5cff%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22132%22%20y%3D%2278%22%20width%3D%22166%22%20height%3D%2262%22%20rx%3D%2212%22%20fill%3D%22%230e1628%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ctext%20x%3D%22215%22%20y%3D%22119%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%2372dce9%22%3E4096%20Wh%3C%2Ftext%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22154%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22184%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22214%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22244%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22137%22%20y%3D%22220%22%20width%3D%22156%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23344054%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3EEcoFlow%20DELTA%20Pro%203%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%204096%20Wh%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E" alt="EcoFlow DELTA Pro 3" loading="lazy"><span class="tag">BACKUP · PORTABLE</span><h3>EcoFlow DELTA Pro 3</h3><p>Estación de energía para respaldo y almacenamiento portátil con entrada solar.</p><div class="product-meta"><span class="chip">4096 Wh</span><span class="chip">4000 W</span><span class="chip">2600 W solar</span></div><div class="product-actions"><button class="btn secondary" onclick="showProduct('storage')">Ver ficha técnica</button><a class="btn primary" href="https://eu.ecoflow.com/products/delta-pro-3-portable-power-station" target="_blank" rel="noopener noreferrer">Ver fabricante</a></div></article>
-</div><div id="productDetail" class="card product-detail"></div></div></section>
+<article class="card"><div class="symbol">☀️</div><h3>Energía solar</h3><p>Paneles fotovoltaicos, inversores, baterías y sistemas de respaldo.</p></article>
+<article class="card"><div class="symbol">⚡</div><h3>Equipos eléctricos</h3><p>Protecciones, conductores, herramientas e instrumentación.</p></article>
+<article class="card"><div class="symbol">🔋</div><h3>Almacenamiento</h3><p>Baterías, estaciones portátiles y soluciones de autonomía energética.</p></article>
+</div>
+</div>
+</section>
 
-<section id="compare"><div class="wrap"><div class="head"><div><span class="eyebrow">COMPARADOR</span><h2>Compara lo que importa.</h2></div><p>Selecciona dos soluciones de la misma categoría. Sin rankings: datos para decidir.</p></div><div class="cards"><article class="card"><span class="tag">PANELES</span><h3>Potencia · Vmp · Imp · Voc · Isc</h3><p>Las variables eléctricas que afectan el diseño del sistema.</p><button class="btn secondary" onclick="compareCategory('solar')">Comparar paneles</button></article><article class="card"><span class="tag">INVERSORES</span><h3>MPPT · DC · AC · corriente</h3><p>Compatibilidad entre campo fotovoltaico e inversor.</p><button class="btn secondary" onclick="compareCategory('inverter')">Comparar inversores</button></article><article class="card"><span class="tag">STORAGE</span><h3>kWh · potencia · expansión</h3><p>Capacidad y potencia no son lo mismo.</p><button class="btn secondary" onclick="compareCategory('storage')">Comparar storage</button></article></div><div id="compareResult" class="card" style="margin-top:18px;display:none"></div></div></section>
+<section id="catalogo">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">CATÁLOGO</span>
+<h2>Productos y soluciones</h2>
+<p>Una selección inicial de categorías. Incorporaremos fichas de productos y enlaces específicos a medida que estén disponibles.</p>
+</div>
+<div class="cards">
+<article class="card"><div class="symbol">☀️</div><h3>Paneles solares</h3><p>Soluciones para instalaciones residenciales y comerciales.</p></article>
+<article class="card"><div class="symbol">🔌</div><h3>Inversores y protecciones</h3><p>Equipos para conversión de energía y seguridad eléctrica.</p></article>
+<article class="card"><div class="symbol">🔋</div><h3>Baterías y respaldo</h3><p>Opciones para almacenamiento y continuidad del suministro.</p></article>
+</div>
+</div>
+</section>
 
-<section class="dark"><div class="wrap"><div class="head"><div><span class="eyebrow">CÓMO TRABAJAMOS</span><h2>Primero entender. Después comparar.</h2></div><p>Una recomendación debe poder explicarse técnicamente.</p></div>
-<div class="process"><div><b>01</b><h3>Entender</h3><p>Definimos la necesidad real y los parámetros importantes.</p></div><div><b>02</b><h3>Comparar</h3><p>Revisamos potencia, capacidad, compatibilidad y limitaciones.</p></div><div><b>03</b><h3>Decidir</h3><p>Presentamos la información para que puedas tomar tu propia decisión.</p></div></div></div></section>
+<section id="tiendas">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">VITRINA COMERCIAL</span>
+<h2>Explora nuestras tiendas</h2>
+<p>Amazon.es es la primera integración. Las demás plataformas se activarán cuando dispongamos de sus respectivos enlaces de afiliación.</p>
+</div>
 
-<section id="guides"><div class="wrap"><div class="head"><div><span class="eyebrow">CENTRO DE CONOCIMIENTO</span><h2>Aprende lo que realmente importa</h2></div><p>Contenido práctico para entender una solución antes de comprarla.</p></div>
-<div class="guides"><article class="guide"><span class="tag">SOLAR · FUNDAMENTOS</span><h3>Vmp, Voc, Imp e Isc</h3><p>Qué significa cada dato y por qué Vmp sirve para operación mientras Voc importa para comprobar la tensión máxima.</p></article><article class="guide"><span class="tag">SOLAR · DISEÑO</span><h3>Series y paralelo</h3><p>Serie aumenta tensión; paralelo aumenta corriente. La base para entender strings y MPPT.</p></article><article class="guide"><span class="tag">PROTECCIÓN</span><h3>Fusibles, SPD y seccionamiento</h3><p>Qué problema resuelve cada protección y por qué no todos los fallos se solucionan con un fusible.</p></article><article class="guide"><span class="tag">DIMENSIONAMIENTO</span><h3>Caída de tensión</h3><p>Cómo relacionar corriente, resistencia, longitud y sección del conductor.</p></article><article class="guide"><span class="tag">INVERSORES</span><h3>Cómo leer un MPPT</h3><p>Rango de tensión, corriente máxima y tensión DC máxima: tres verificaciones antes de conectar.</p></article><article class="guide"><span class="tag">COMPARATIVAS</span><h3>Cómo comparar un producto energético</h3><p>Una metodología para separar prestaciones útiles, compatibilidad, límites y marketing.</p></article></div></div></section>
+<div class="tabs" role="tablist" aria-label="Tiendas">
+<button class="tab" id="tab-amazon" role="tab" aria-selected="true" aria-controls="panel-amazon" onclick="showStore('amazon')">Amazon.es</button>
+<button class="tab" id="tab-ebay" role="tab" aria-selected="false" aria-controls="panel-ebay" onclick="showStore('ebay')">eBay</button>
+<button class="tab" id="tab-alibaba" role="tab" aria-selected="false" aria-controls="panel-alibaba" onclick="showStore('alibaba')">Alibaba</button>
+</div>
 
-<section class="about" id="about"><div class="wrap about-grid"><div><span class="eyebrow">SOBRE ENERVANTY</span><h2>Una vitrina técnica para la nueva energía.</h2></div><div><p>EnerVanty es un proyecto independiente orientado a reunir información, comparativas y soluciones relacionadas con energía solar, almacenamiento, respaldo y tecnologías energéticas.</p><p>La plataforma está creciendo paso a paso. Nuestro objetivo es facilitar decisiones informadas y conectar a las personas con soluciones disponibles en el mercado.</p></div></div></section>
+<div class="panel" id="panel-amazon" role="tabpanel" aria-labelledby="tab-amazon">
+<p class="notice">Aviso: EnerVanty puede recibir comisiones por compras que cumplan las condiciones del programa de afiliados. Los enlaces e imágenes de cada producto deben corresponder al artículo anunciado. Esta galería es una plantilla inicial.</p>
+<div class="gallery">
+<article class="product">
+<div class="product-art" aria-hidden="true">☀️</div>
+<span class="eyebrow">ENERGÍA SOLAR</span>
+<h3>Paneles fotovoltaicos</h3>
+<p>Consulta opciones de paneles solares disponibles en Amazon.es.</p>
+<a class="btn" href="https://www.amazon.es/s?k=panel+solar&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar en Amazon.es ↗</a>
+</article>
+<article class="product">
+<div class="product-art" aria-hidden="true">🔋</div>
+<span class="eyebrow">ALMACENAMIENTO</span>
+<h3>Baterías y estaciones</h3>
+<p>Explora equipos de almacenamiento y respaldo energético.</p>
+<a class="btn" href="https://www.amazon.es/s?k=estacion+de+energia+portatil&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Ver opciones ↗</a>
+</article>
+<article class="product">
+<div class="product-art" aria-hidden="true">🔌</div>
+<span class="eyebrow">EQUIPOS ELÉCTRICOS</span>
+<h3>Inversores solares</h3>
+<p>Consulta productos y compara sus características técnicas.</p>
+<a class="btn" href="https://www.amazon.es/s?k=inversor+solar&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar inversores ↗</a>
+</article>
+<article class="product">
+<div class="product-art" aria-hidden="true">🧰</div>
+<span class="eyebrow">INSTRUMENTACIÓN</span>
+<h3>Herramientas de medición</h3>
+<p>Equipos para diagnóstico y trabajos eléctricos.</p>
+<a class="btn" href="https://www.amazon.es/s?k=multimetro+digital&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Ver herramientas ↗</a>
+</article>
+<article class="product">
+<div class="product-art" aria-hidden="true">🛡️</div>
+<span class="eyebrow">PROTECCIÓN</span>
+<h3>Protecciones eléctricas</h3>
+<p>Explora dispositivos de protección para instalaciones.</p>
+<a class="btn" href="https://www.amazon.es/s?k=proteccion+electrica&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar productos ↗</a>
+</article>
+<article class="product">
+<div class="product-art" aria-hidden="true">📘</div>
+<span class="eyebrow">ENLACE DE PRUEBA</span>
+<h3>Producto compartido</h3>
+<p>Enlace de prueba facilitado para comprobar la navegación. Sustituir por un producto pertinente antes de promocionarlo.</p>
+<a class="btn" href="https://amzn.to/3VH6s4z" target="_blank" rel="sponsored nofollow noopener">Abrir enlace ↗</a>
+</article>
+</div>
+</div>
+
+<div class="panel" id="panel-ebay" role="tabpanel" aria-labelledby="tab-ebay" hidden>
+<div class="card"><h3>Próximamente: eBay</h3><p>Esta sección está reservada para productos y enlaces de afiliación de eBay. Todavía no hay una afiliación configurada aquí.</p><a class="btn btn-light" href="https://www.ebay.es/" target="_blank" rel="noopener noreferrer">Visitar eBay ↗</a></div>
+</div>
+
+<div class="panel" id="panel-alibaba" role="tabpanel" aria-labelledby="tab-alibaba" hidden>
+<div class="card"><h3>Próximamente: Alibaba</h3><p>Esta sección está reservada para proveedores y productos de Alibaba. Incorporaremos los enlaces correspondientes cuando esté lista la afiliación.</p><a class="btn btn-light" href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Visitar Alibaba ↗</a></div>
+</div>
+</div>
+</section>
+
+<section id="guias">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">REVISTA ENERVANTY</span>
+<h2>Aprende antes de comprar</h2>
+<p>Guías prácticas para comprender la tecnología, comparar características y tomar decisiones informadas.</p>
+</div>
+<div class="cards">
+<article class="card"><h3>Cómo elegir paneles solares</h3><p>Potencia, tensión, corriente y condiciones de instalación.</p></article>
+<article class="card"><h3>Inversores y baterías</h3><p>Conceptos esenciales para evaluar compatibilidad y autonomía.</p></article>
+<article class="card"><h3>Seguridad eléctrica</h3><p>La importancia de dimensionar conductores y protecciones correctamente.</p></article>
+</div>
+</div>
+</section>
 </main>
 
-<footer><div class="wrap foot"><div><div class="brand"><span class="mark">E</span>EnerVanty</div><small>Energy • Technology • Solutions</small></div><div><small>Proyecto en desarrollo</small></div></div><div class="wrap foot-bottom">© <span id="year"></span> EnerVanty. Información independiente. Verifica siempre las especificaciones del fabricante.</div></footer>
+<footer id="nosotros">
+<div class="wrap">
+<a class="brand" href="#inicio">Ener<span>Vanty</span></a>
+<p>Revista comercial y catálogo de energía, tecnología y soluciones.</p>
+<p>Los productos, precios y disponibilidad dependen de cada comercio. Verifica siempre la información del vendedor.</p>
+<p>© <span id="year"></span> EnerVanty</p>
+</div>
+</footer>
+
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
-const products={
-panel:{title:"Trinasolar Vertex S+ · TSM-NEG9R.28",image:"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%2272%22%20y%3D%2245%22%20width%3D%22276%22%20height%3D%22190%22%20rx%3D%2210%22%20fill%3D%22%2314213d%22%20stroke%3D%22%236b5cff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20stroke%3D%22%234c6aa8%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M141%2045v190M210%2045v190M279%2045v190%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M72%2092h276M72%20139h276M72%20186h276%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M210%20235l-18%2028h36z%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3ETrinasolar%20Vertex%20S%2B%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%20450%20W%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E",category:"PANEL SOLAR · 450 W",description:"Módulo residencial de tecnología n-type i-TOPCon y doble vidrio. Los valores siguientes corresponden a la versión de 450 W consultada en la ficha oficial.",rows:[["Potencia máxima","450 W"],["Vmp","44,6 V"],["Imp","10,09 A"],["Voc","52,9 V"],["Isc","10,74 A"],["Eficiencia máxima","22,5 %"],["Dimensiones","1762 × 1134 × 30 mm"],["Peso","21,0 kg"],["Tensión máxima del sistema","1500 V DC"],["Fusible máximo en serie","25 A"]],source:"Ficha técnica oficial Trinasolar",url:"https://vertexsplus.trinasolar.com/es/"},
-inverter:{title:"Hoymiles HMS-1000-2T",image:"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%2282%22%20y%3D%2272%22%20width%3D%22256%22%20height%3D%22135%22%20rx%3D%2222%22%20fill%3D%22%23e9edf3%22%20stroke%3D%22%23596579%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22108%22%20y%3D%2298%22%20width%3D%22204%22%20height%3D%2234%22%20rx%3D%228%22%20fill%3D%22%231a2335%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22132%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22166%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22300%22%20cy%3D%22169%22%20r%3D%2212%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M210%20207v30M190%20237h40%22%20stroke%3D%22%23596579%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3EHoymiles%20HMS-1000-2T%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%202%20MPPT%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E",category:"MICROINVERSOR · 1000 VA",description:"Microinversor monofásico 2 en 1. Cada unidad puede conectar hasta dos módulos y dispone de MPPT independiente por entrada.",rows:[["Potencia de salida","1000 VA"],["MPPT","2"],["Rango MPPT","16–60 V"],["Tensión máxima de entrada","65 V"],["Corriente máxima de entrada","2 × 16 A"],["Corriente máxima de cortocircuito","2 × 25 A"],["Eficiencia pico","96,5 %"],["Protección","IP67"],["Temperatura ambiente","−40 a +65 °C"],["Dimensiones","261 × 180 × 35,1 mm"]],source:"Ficha técnica oficial Hoymiles",url:"https://www.hoymiles.com/es/products/hms-600-700-800-900-1000-2t.html"},
-storage:{title:"EcoFlow DELTA Pro 3",image:"data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20420%20300%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22420%22%20height%3D%22300%22%20rx%3D%2224%22%20fill%3D%22%23f5f8fb%22%2F%3E%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22105%22%20y%3D%2248%22%20width%3D%22220%22%20height%3D%22210%22%20rx%3D%2228%22%20fill%3D%22%23202a3d%22%20stroke%3D%22%236b5cff%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22132%22%20y%3D%2278%22%20width%3D%22166%22%20height%3D%2262%22%20rx%3D%2212%22%20fill%3D%22%230e1628%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ctext%20x%3D%22215%22%20y%3D%22119%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%2372dce9%22%3E4096%20Wh%3C%2Ftext%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22154%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22184%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%2318b7d6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22214%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22244%22%20cy%3D%22190%22%20r%3D%2210%22%20fill%3D%22%236b5cff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%22137%22%20y%3D%22220%22%20width%3D%22156%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23344054%22%2F%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22278%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2213%22%20font-weight%3D%22700%22%20fill%3D%22%23667085%22%3EEcoFlow%20DELTA%20Pro%203%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22210%22%20y%3D%22294%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2210%22%20fill%3D%22%2398a2b3%22%3EIlustraci%C3%B3n%20t%C3%A9cnica%20%E2%80%A2%204096%20Wh%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E",category:"BACKUP · PORTABLE",description:"Estación de energía portátil con batería LFP, salida AC de alta potencia y dos entradas solares independientes.",rows:[["Capacidad","4096 Wh"],["Salida AC","4000 W máx."],["Sobretensión","8000 W"],["Entrada solar total","2600 W"],["Entrada solar HV","30–150 V / 15 A / 1600 W"],["Entrada solar LV","11–60 V / 20 A / 1000 W"],["Química","LFP"],["Ciclos","4000 ciclos hasta 80 %"],["Peso","51,5 kg"],["Dimensiones","693 × 341 × 410 mm"]],source:"Ficha oficial EcoFlow Europe",url:"https://eu.ecoflow.com/products/delta-pro-3-portable-power-station"}
-};
-function showProduct(k){
-  const d=document.getElementById('productDetail');
-  const p=products[k];
-  if(!d||!p)return;
-  const rows=p.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
-  d.innerHTML=`<div class="detail-grid">
-    <div><img class="detail-image" decoding="async" src="${p.image}" alt="${p.title}" loading="eager"></div>
-    <div>
-      <span class="tag">${p.category}</span>
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <table class="specs"><tbody>${rows}</tbody></table>
-      <p class="source-note">Fuente: ${p.source}. Verifica siempre la versión exacta y las condiciones locales antes de diseñar o comprar.</p>
-      <div class="product-actions">
-        <a class="btn primary" href="${p.url}" target="_blank" rel="noopener noreferrer">Abrir fuente del fabricante ↗</a>
-        <button class="btn secondary" type="button" onclick="closeProduct()">Cerrar</button>
-      </div>
-    </div>
-  </div>`;
-  d.style.display='block';
-  d.scrollIntoView({behavior:'smooth',block:'nearest'});
+function showStore(store){
+  const stores=['amazon','ebay','alibaba'];
+  stores.forEach(function(name){
+    const active=name===store;
+    document.getElementById('panel-'+name).hidden=!active;
+    document.getElementById('tab-'+name).setAttribute('aria-selected',String(active));
+  });
 }
-function closeProduct(){
-  const d=document.getElementById('productDetail');
-  if(d)d.style.display='none';
-}
-function filterProducts(t){document.querySelectorAll('.product').forEach(x=>x.style.display=(t==='all'||x.dataset.type===t)?'block':'none');}
-function compareCategory(t){const r=document.getElementById('compareResult');let html='';if(t==='solar')html='<span class="tag">COMPARACIÓN SOLAR</span><h3>Paneles: qué mirar</h3><table class="compare-table"><tr><th>Variable</th><th>Por qué importa</th></tr><tr><td>Potencia</td><td>Capacidad nominal del módulo bajo STC.</td></tr><tr><td>Vmp / Imp</td><td>Determinan el punto de operación y ayudan a revisar compatibilidad.</td></tr><tr><td>Voc / Isc</td><td>Se usan para comprobar límites eléctricos y criterios de diseño/protección.</td></tr></table><p class="compare-note">En una comparación real, EnerVanty debe enfrentar modelos concretos con datos de sus fichas oficiales.</p>';if(t==='inverter')html='<span class="tag">COMPARACIÓN INVERSORES</span><h3>Inversores: compatibilidad antes que apariencia</h3><table class="compare-table"><tr><th>Variable</th><th>Qué revisar</th></tr><tr><td>Potencia AC</td><td>Capacidad nominal de salida.</td></tr><tr><td>V DC máxima</td><td>No debe superarse con la tensión máxima del campo FV.</td></tr><tr><td>Rango MPPT</td><td>Debe cubrir la tensión de operación del string.</td></tr><tr><td>Corriente MPPT</td><td>Debe admitir la corriente prevista del arreglo.</td></tr><tr><td>N.º MPPT / entradas</td><td>Define cómo pueden organizarse los strings.</td></tr></table>';if(t==='storage')html='<span class="tag">COMPARACIÓN STORAGE</span><h3>Almacenamiento: energía no es lo mismo que potencia</h3><table class="compare-table"><tr><th>Variable</th><th>Qué significa</th></tr><tr><td>Capacidad (kWh)</td><td>Cuánta energía puede almacenar.</td></tr><tr><td>Potencia (kW)</td><td>Cuánta potencia puede entregar o absorber.</td></tr><tr><td>Entrada solar</td><td>Potencia, tensión y corriente máximas aceptadas.</td></tr><tr><td>Expansión</td><td>Posibilidad de añadir baterías o módulos.</td></tr><tr><td>Química / ciclos</td><td>Características relevantes para uso y vida útil.</td></tr></table>';r.innerHTML=html;r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'nearest'});}
+document.getElementById('year').textContent=new Date().getFullYear();
 </script>
-</body></html>
+</body>
+</html>
