@@ -1,226 +1,734 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="EnerVanty: revista comercial, catálogo y soluciones de energía solar y tecnología.">
-<title>EnerVanty | Energía, Tecnología y Soluciones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="EnerVanty: revista comercial de energía solar, equipos eléctricos, baterías, inversores y materiales para instalaciones fotovoltaicas.">
+<title>EnerVanty | Energía solar y equipos eléctricos</title>
+
 <style>
-:root{--ink:#172033;--muted:#667085;--blue:#13a9c4;--violet:#6857e8;--bg:#f6f8fc;--line:#e2e7ef}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-a{text-decoration:none;color:inherit}
-.wrap{width:min(1120px,92%);margin:auto}
-header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
-nav{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:12px 0}
-.brand{font-size:1.35rem;font-weight:800}
-.brand span{color:var(--blue)}
-.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}
-.links a:hover{color:var(--blue)}
-.hero{padding:75px 0;background:linear-gradient(125deg,#fff,#eafaff)}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
-.eyebrow{font-size:.76rem;letter-spacing:2px;font-weight:bold;color:#078da8}
-h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:14px 0}
-h1 span{color:var(--violet)}
-p{color:var(--muted)}
-.hero-art{background:linear-gradient(145deg,#101a30,#303265);color:white;border-radius:26px;padding:35px;min-height:260px;display:flex;flex-direction:column;justify-content:end}
-.hero-art strong{font-size:2rem;line-height:1.15}
-.btn{display:inline-block;padding:12px 17px;border-radius:10px;font-weight:bold;background:var(--ink);color:white;border:0;cursor:pointer}
-.btn-light{background:white;color:var(--ink);border:1px solid var(--line)}
-section{padding:65px 0}
-.section-head{margin-bottom:25px}
-h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:8px 0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{padding:24px;background:white;border:1px solid var(--line);border-radius:18px}
-.card h3{margin:10px 0}
-.symbol{font-size:2rem}
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
-.tab{padding:11px 18px;border:1px solid var(--line);border-radius:30px;background:white;font-weight:bold;cursor:pointer}
-.tab[aria-selected=true]{background:var(--ink);color:white}
-.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.product{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
-.product-art{height:150px;border-radius:12px;background:linear-gradient(140deg,#eafaff,#f0edff);display:grid;place-items:center;font-size:3.5rem;margin-bottom:15px}
-.product h3{margin:5px 0}
-.product .btn{margin-top:auto;text-align:center}
-.notice{font-size:.86rem;background:#eef3f9;border-radius:12px;padding:14px}
-.panel[hidden]{display:none}
-footer{background:#121b2e;color:white;padding:35px 0}
-footer p{color:#c7cfdd;font-size:.9rem}
-@media(max-width:760px){.hero-grid,.cards,.gallery{grid-template-columns:1fr}.hero{padding:48px 0}.hero-art{min-height:190px}section{padding:45px 0}.links{gap:12px}.product-art{height:125px}}
+:root {
+  --azul:#10345d;
+  --azul2:#0759b8;
+  --verde:#39a85a;
+  --naranja:#ffb51b;
+  --fondo:#f5f8fb;
+  --texto:#18324e;
+  --borde:#e2e9f0;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  background:#fff;
+  line-height:1.5;
+}
+
+a { color:inherit; text-decoration:none; }
+
+button { font:inherit; cursor:pointer; }
+
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#fff;
+  border-bottom:1px solid var(--borde);
+}
+
+.topbar {
+  max-width:1240px;
+  margin:auto;
+  padding:13px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-shrink:0;
+}
+
+.logo-icon { font-size:37px; }
+
+.logo-name {
+  font-size:29px;
+  font-weight:800;
+  letter-spacing:-1px;
+  color:var(--azul);
+}
+
+.logo-name span { color:var(--verde); }
+
+.tagline {
+  font-size:11px;
+  color:#65778b;
+  margin-top:-3px;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:13px;
+  font-weight:600;
+}
+
+nav a:hover { color:var(--verde); }
+
+.hero {
+  min-height:440px;
+  display:flex;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(5,22,40,.88) 0%,
+    rgba(5,22,40,.60) 42%,rgba(5,22,40,.08) 100%),
+    url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1800&q=85")
+    center 55%/cover no-repeat;
+}
+
+.hero-content {
+  max-width:1240px;
+  width:100%;
+  margin:auto;
+  padding:65px 24px;
+}
+
+.hero-content > * { max-width:570px; }
+
+.eyebrow {
+  color:#b9f18c;
+  text-transform:uppercase;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+h1 {
+  font-size:clamp(35px,5vw,58px);
+  line-height:1.08;
+  letter-spacing:-1.5px;
+  margin:15px 0;
+}
+
+.hero p {
+  font-size:17px;
+  color:#f0f5fa;
+  margin:0 0 26px;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 19px;
+  border-radius:9px;
+  font-weight:700;
+  border:0;
+  transition:transform .2s,opacity .2s;
+}
+
+.btn:hover { transform:translateY(-2px); opacity:.92; }
+
+.btn-amazon { background:var(--naranja); color:#142c49; }
+
+.btn-blue { background:var(--azul2); color:white; }
+
+.btn-outline {
+  border:1px solid var(--borde);
+  background:#fff;
+  color:var(--azul);
+}
+
+main { max-width:1240px; margin:auto; padding:0 20px; }
+
+.section { padding:35px 0; }
+
+.section-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:19px;
+}
+
+h2 {
+  color:var(--azul);
+  font-size:clamp(23px,3vw,31px);
+  line-height:1.2;
+  margin:0 0 7px;
+}
+
+.section-head p, .muted { color:#718196; margin:0; }
+
+.categories {
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:13px;
+}
+
+.category {
+  display:block;
+  border:1px solid var(--borde);
+  border-radius:11px;
+  overflow:hidden;
+  background:white;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.category:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 22px #16345112;
+}
+
+.category img {
+  width:100%;
+  height:105px;
+  object-fit:cover;
+  display:block;
+}
+
+.category-label {
+  padding:12px 10px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.category-label span { float:right; color:var(--verde); }
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+}
+
+.product {
+  border:1px solid var(--borde);
+  border-radius:12px;
+  padding:13px;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  background:white;
+}
+
+.product img {
+  width:100%;
+  height:155px;
+  object-fit:contain;
+  margin-bottom:12px;
+}
+
+.product h3 {
+  font-size:15px;
+  margin:0 0 8px;
+  color:var(--azul);
+}
+
+.product p {
+  font-size:12px;
+  color:#728197;
+  margin:0 0 13px;
+}
+
+.product .btn {
+  margin-top:auto;
+  padding:11px 8px;
+  font-size:13px;
+  width:100%;
+}
+
+.market-tabs {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0;
+}
+
+.market-tab {
+  padding:11px 17px;
+  border:1px solid var(--borde);
+  background:#fff;
+  color:var(--azul);
+  border-radius:9px;
+  font-weight:700;
+}
+
+.market-tab.active {
+  background:var(--azul);
+  color:#fff;
+  border-color:var(--azul);
+}
+
+.market-panel {
+  border:1px solid var(--borde);
+  border-radius:13px;
+  padding:25px;
+  background:#fff;
+}
+
+.market-panel h3 { margin-top:0; color:var(--azul); }
+
+.status {
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:20px;
+  background:#fff0c7;
+  color:#815700;
+  font-size:12px;
+  font-weight:700;
+}
+
+.editorial {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  align-items:center;
+  background:var(--fondo);
+  border-radius:15px;
+  padding:28px;
+}
+
+.editorial img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:11px;
+}
+
+.editorial p { color:#63758a; }
+
+.searchbar {
+  display:flex;
+  gap:8px;
+  width:min(100%,430px);
+}
+
+.searchbar input {
+  min-width:0;
+  flex:1;
+  padding:12px;
+  border:1px solid var(--borde);
+  border-radius:9px;
+  font-size:14px;
+}
+
+footer {
+  margin-top:30px;
+  background:#102b49;
+  color:white;
+}
+
+.footer-inner {
+  max-width:1240px;
+  margin:auto;
+  padding:35px 20px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:25px;
+}
+
+footer p, footer a { color:#d0dbe7; font-size:13px; }
+
+footer h3 { margin-top:0; }
+
+.disclosure {
+  border-top:1px solid #ffffff25;
+  padding:15px 20px;
+  text-align:center;
+  color:#d0dbe7;
+  font-size:11px;
+}
+
+@media(max-width:900px) {
+  .topbar { align-items:flex-start; flex-direction:column; }
+  nav { justify-content:flex-start; gap:12px; }
+  .categories { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .products { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+@media(max-width:520px) {
+  .topbar { padding:12px 15px; }
+  .logo-name { font-size:26px; }
+  nav { font-size:12px; gap:10px 14px; }
+  .hero { min-height:410px; background-position:58% center; }
+  .hero-content { padding:45px 18px; }
+  .hero p { font-size:15px; }
+  main { padding:0 13px; }
+  .section { padding:27px 0; }
+  .categories { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .category img { height:100px; }
+  .products { gap:10px; }
+  .product { padding:10px; }
+  .product img { height:115px; }
+  .product h3 { font-size:13px; }
+  .product .btn { font-size:12px; }
+  .section-head { align-items:flex-start; flex-direction:column; }
+  .editorial { grid-template-columns:1fr; padding:17px; }
+  .editorial img { height:190px; }
+  .footer-inner { grid-template-columns:1fr; gap:12px; }
+  .market-panel { padding:17px; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="wrap">
-<nav>
-<a class="brand" href="#inicio">Ener<span>Vanty</span></a>
-<div class="links">
-<a href="#energia">Energía solar</a>
-<a href="#catalogo">Catálogo</a>
-<a href="#tiendas">Tiendas</a>
-<a href="#guias">Guías</a>
-</div>
-</nav>
-</div>
+  <div class="topbar">
+    <a class="logo" href="#inicio" aria-label="EnerVanty, inicio">
+      <span class="logo-icon">☀️</span>
+      <div>
+        <div class="logo-name">Ener<span>Vanty</span></div>
+        <div class="tagline">Energía hoy, un mejor mañana</div>
+      </div>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#categorias">Energía solar</a>
+      <a href="#productos">Equipos eléctricos</a>
+      <a href="#tiendas">Tiendas</a>
+      <a href="#revista">Revista</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<main>
 <section class="hero" id="inicio">
-<div class="wrap hero-grid">
-<div>
-<span class="eyebrow">ENERGÍA · TECNOLOGÍA · SOLUCIONES</span>
-<h1>Ideas inteligentes.<br><span>Soluciones reales.</span></h1>
-<p>Una revista comercial para explorar tecnología, energía solar, equipos eléctricos y soluciones prácticas para el hogar y la empresa.</p>
-<a class="btn" href="#tiendas">Explorar productos</a>
-<a class="btn btn-light" href="#guias">Leer nuestras guías</a>
-</div>
-<div class="hero-art">
-<span class="eyebrow">ENERVANTY</span>
-<strong>La tecnología que impulsa tu futuro.</strong>
-<p>Información, productos y herramientas para elegir mejor.</p>
-</div>
-</div>
+  <div class="hero-content">
+    <div class="eyebrow">Tecnología · Energía · Futuro</div>
+    <h1>Soluciones en energía solar y equipos eléctricos</h1>
+    <p>
+      Descubre equipos, compara alternativas y encuentra materiales
+      para construir un futuro energético más eficiente y sostenible.
+    </p>
+    <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=paneles+solares&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">
+      Ver productos en Amazon.es →
+    </a>
+  </div>
 </section>
 
-<section id="energia">
-<div class="wrap">
-<div class="section-head">
-<span class="eyebrow">ÁREAS DE INTERÉS</span>
-<h2>Explora nuestras categorías</h2>
-<p>Contenido orientado a la selección práctica de equipos y soluciones tecnológicas.</p>
-</div>
-<div class="cards">
-<article class="card"><div class="symbol">☀️</div><h3>Energía solar</h3><p>Paneles fotovoltaicos, inversores, baterías y sistemas de respaldo.</p></article>
-<article class="card"><div class="symbol">⚡</div><h3>Equipos eléctricos</h3><p>Protecciones, conductores, herramientas e instrumentación.</p></article>
-<article class="card"><div class="symbol">🔋</div><h3>Almacenamiento</h3><p>Baterías, estaciones portátiles y soluciones de autonomía energética.</p></article>
-</div>
-</div>
+<main>
+
+<section class="section" id="categorias">
+  <div class="section-head">
+    <div>
+      <h2>Explora nuestras categorías</h2>
+      <p>Encuentra los equipos que necesitas para tu proyecto.</p>
+    </div>
+  </div>
+
+  <div class="categories">
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Paneles solares"
+      src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Paneles solares <span>→</span></div>
+    </a>
+
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Instalación de inversores"
+      src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Inversores <span>→</span></div>
+    </a>
+
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Baterías para energía"
+      src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Baterías <span>→</span></div>
+    </a>
+
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Material eléctrico"
+      src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Protección eléctrica <span>→</span></div>
+    </a>
+
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Cables eléctricos"
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Conectores y cables <span>→</span></div>
+    </a>
+
+    <a class="category" href="#productos">
+      <img loading="lazy" alt="Instalación de paneles"
+      src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=500&q=75">
+      <div class="category-label">Estructuras <span>→</span></div>
+    </a>
+  </div>
 </section>
 
-<section id="catalogo">
-<div class="wrap">
-<div class="section-head">
-<span class="eyebrow">CATÁLOGO</span>
-<h2>Productos y soluciones</h2>
-<p>Una selección inicial de categorías. Incorporaremos fichas de productos y enlaces específicos a medida que estén disponibles.</p>
-</div>
-<div class="cards">
-<article class="card"><div class="symbol">☀️</div><h3>Paneles solares</h3><p>Soluciones para instalaciones residenciales y comerciales.</p></article>
-<article class="card"><div class="symbol">🔌</div><h3>Inversores y protecciones</h3><p>Equipos para conversión de energía y seguridad eléctrica.</p></article>
-<article class="card"><div class="symbol">🔋</div><h3>Baterías y respaldo</h3><p>Opciones para almacenamiento y continuidad del suministro.</p></article>
-</div>
-</div>
+<section class="section" id="productos">
+  <div class="section-head">
+    <div>
+      <h2>Productos destacados</h2>
+      <p>Explora opciones disponibles en Amazon.es.</p>
+    </div>
+    <a class="btn btn-blue"
+       href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">
+       Ver más en Amazon.es →
+    </a>
+  </div>
+
+  <div class="searchbar">
+    <input id="busqueda" type="search"
+      placeholder="Buscar paneles, baterías, inversores..."
+      aria-label="Buscar productos">
+    <button class="btn btn-blue" onclick="buscarProductos()">Buscar</button>
+  </div>
+
+  <p class="muted" style="font-size:12px;margin:10px 0 18px">
+    Las búsquedas se realizan en Amazon.es. Verifica las especificaciones
+    y el precio vigente antes de comprar.
+  </p>
+
+  <div class="products">
+    <article class="product">
+      <img loading="lazy" alt="Panel fotovoltaico"
+       src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=75">
+      <h3>Paneles solares fotovoltaicos</h3>
+      <p>Opciones para instalaciones residenciales y comerciales.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=panel+solar+fotovoltaico&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Equipo inversor"
+       src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
+      <h3>Inversores solares</h3>
+      <p>Compara potencia, tensión de entrada y características.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=inversor+solar+hibrido&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Sistema de almacenamiento"
+       src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=500&q=75">
+      <h3>Baterías solares</h3>
+      <p>Explora alternativas de almacenamiento de energía.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=bateria+solar+LiFePO4&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Accesorios para instalaciones solares"
+       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
+      <h3>Conectores y accesorios</h3>
+      <p>Materiales para conexiones y montaje fotovoltaico.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=conectores+solares+MC4&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Cable eléctrico"
+       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
+      <h3>Cables para energía solar</h3>
+      <p>Busca conductores y accesorios según tu instalación.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=cable+solar+fotovoltaico&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Equipos de protección eléctrica"
+       src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
+      <h3>Protecciones eléctricas</h3>
+      <p>Explora interruptores, fusibles y protecciones DC.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=proteccion+electrica+solar+DC&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Herramientas eléctricas"
+       src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=500&q=75">
+      <h3>Herramientas de instalación</h3>
+      <p>Herramientas y accesorios para trabajos eléctricos.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=herramientas+instalacion+solar&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+
+    <article class="product">
+      <img loading="lazy" alt="Accesorios para montaje fotovoltaico"
+       src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=500&q=75">
+      <h3>Estructuras y soportes</h3>
+      <p>Soluciones de montaje para distintas superficies.</p>
+      <a class="btn btn-amazon"
+       href="https://www.amazon.es/s?k=estructura+montaje+panel+solar&tag=enervanty21-21"
+       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
+    </article>
+  </div>
 </section>
 
-<section id="tiendas">
-<div class="wrap">
-<div class="section-head">
-<span class="eyebrow">VITRINA COMERCIAL</span>
-<h2>Explora nuestras tiendas</h2>
-<p>Amazon.es es la primera integración. Las demás plataformas se activarán cuando dispongamos de sus respectivos enlaces de afiliación.</p>
-</div>
+<section class="section" id="tiendas">
+  <h2>Nuestras tiendas asociadas</h2>
+  <p class="muted">Estamos construyendo una plataforma comercial multimarca.</p>
 
-<div class="tabs" role="tablist" aria-label="Tiendas">
-<button class="tab" id="tab-amazon" role="tab" aria-selected="true" aria-controls="panel-amazon" onclick="showStore('amazon')">Amazon.es</button>
-<button class="tab" id="tab-ebay" role="tab" aria-selected="false" aria-controls="panel-ebay" onclick="showStore('ebay')">eBay</button>
-<button class="tab" id="tab-alibaba" role="tab" aria-selected="false" aria-controls="panel-alibaba" onclick="showStore('alibaba')">Alibaba</button>
-</div>
+  <div class="market-tabs" role="tablist" aria-label="Tiendas">
+    <button class="market-tab active" role="tab"
+      aria-selected="true" onclick="mostrarTienda('amazon',this)">Amazon.es</button>
+    <button class="market-tab" role="tab"
+      aria-selected="false" onclick="mostrarTienda('ebay',this)">eBay</button>
+    <button class="market-tab" role="tab"
+      aria-selected="false" onclick="mostrarTienda('alibaba',this)">Alibaba</button>
+  </div>
 
-<div class="panel" id="panel-amazon" role="tabpanel" aria-labelledby="tab-amazon">
-<p class="notice">Aviso: EnerVanty puede recibir comisiones por compras que cumplan las condiciones del programa de afiliados. Los enlaces e imágenes de cada producto deben corresponder al artículo anunciado. Esta galería es una plantilla inicial.</p>
-<div class="gallery">
-<article class="product">
-<div class="product-art" aria-hidden="true">☀️</div>
-<span class="eyebrow">ENERGÍA SOLAR</span>
-<h3>Paneles fotovoltaicos</h3>
-<p>Consulta opciones de paneles solares disponibles en Amazon.es.</p>
-<a class="btn" href="https://www.amazon.es/s?k=panel+solar&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar en Amazon.es ↗</a>
-</article>
-<article class="product">
-<div class="product-art" aria-hidden="true">🔋</div>
-<span class="eyebrow">ALMACENAMIENTO</span>
-<h3>Baterías y estaciones</h3>
-<p>Explora equipos de almacenamiento y respaldo energético.</p>
-<a class="btn" href="https://www.amazon.es/s?k=estacion+de+energia+portatil&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Ver opciones ↗</a>
-</article>
-<article class="product">
-<div class="product-art" aria-hidden="true">🔌</div>
-<span class="eyebrow">EQUIPOS ELÉCTRICOS</span>
-<h3>Inversores solares</h3>
-<p>Consulta productos y compara sus características técnicas.</p>
-<a class="btn" href="https://www.amazon.es/s?k=inversor+solar&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar inversores ↗</a>
-</article>
-<article class="product">
-<div class="product-art" aria-hidden="true">🧰</div>
-<span class="eyebrow">INSTRUMENTACIÓN</span>
-<h3>Herramientas de medición</h3>
-<p>Equipos para diagnóstico y trabajos eléctricos.</p>
-<a class="btn" href="https://www.amazon.es/s?k=multimetro+digital&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Ver herramientas ↗</a>
-</article>
-<article class="product">
-<div class="product-art" aria-hidden="true">🛡️</div>
-<span class="eyebrow">PROTECCIÓN</span>
-<h3>Protecciones eléctricas</h3>
-<p>Explora dispositivos de protección para instalaciones.</p>
-<a class="btn" href="https://www.amazon.es/s?k=proteccion+electrica&tag=enervanty21-21" target="_blank" rel="sponsored nofollow noopener">Buscar productos ↗</a>
-</article>
-<article class="product">
-<div class="product-art" aria-hidden="true">📘</div>
-<span class="eyebrow">ENLACE DE PRUEBA</span>
-<h3>Producto compartido</h3>
-<p>Enlace de prueba facilitado para comprobar la navegación. Sustituir por un producto pertinente antes de promocionarlo.</p>
-<a class="btn" href="https://amzn.to/3VH6s4z" target="_blank" rel="sponsored nofollow noopener">Abrir enlace ↗</a>
-</article>
-</div>
-</div>
-
-<div class="panel" id="panel-ebay" role="tabpanel" aria-labelledby="tab-ebay" hidden>
-<div class="card"><h3>Próximamente: eBay</h3><p>Esta sección está reservada para productos y enlaces de afiliación de eBay. Todavía no hay una afiliación configurada aquí.</p><a class="btn btn-light" href="https://www.ebay.es/" target="_blank" rel="noopener noreferrer">Visitar eBay ↗</a></div>
-</div>
-
-<div class="panel" id="panel-alibaba" role="tabpanel" aria-labelledby="tab-alibaba" hidden>
-<div class="card"><h3>Próximamente: Alibaba</h3><p>Esta sección está reservada para proveedores y productos de Alibaba. Incorporaremos los enlaces correspondientes cuando esté lista la afiliación.</p><a class="btn btn-light" href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Visitar Alibaba ↗</a></div>
-</div>
-</div>
+  <div class="market-panel" id="panel-tienda" aria-live="polite">
+    <h3>Encuentra equipos en Amazon.es</h3>
+    <p>Explora productos de energía solar y materiales eléctricos.</p>
+    <a class="btn btn-amazon"
+      href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
+      target="_blank" rel="sponsored nofollow noopener">Visitar Amazon.es →</a>
+  </div>
 </section>
 
-<section id="guias">
-<div class="wrap">
-<div class="section-head">
-<span class="eyebrow">REVISTA ENERVANTY</span>
-<h2>Aprende antes de comprar</h2>
-<p>Guías prácticas para comprender la tecnología, comparar características y tomar decisiones informadas.</p>
-</div>
-<div class="cards">
-<article class="card"><h3>Cómo elegir paneles solares</h3><p>Potencia, tensión, corriente y condiciones de instalación.</p></article>
-<article class="card"><h3>Inversores y baterías</h3><p>Conceptos esenciales para evaluar compatibilidad y autonomía.</p></article>
-<article class="card"><h3>Seguridad eléctrica</h3><p>La importancia de dimensionar conductores y protecciones correctamente.</p></article>
-</div>
-</div>
+<section class="section" id="revista">
+  <div class="editorial">
+    <div>
+      <div class="eyebrow" style="color:var(--verde)">Revista EnerVanty</div>
+      <h2>Conocimiento para decidir mejor</h2>
+      <p>
+        Información práctica sobre energía solar, eficiencia energética,
+        selección de equipos y criterios técnicos para tus proyectos.
+      </p>
+      <p>
+        Nuestro objetivo es ayudarte a comparar alternativas con criterio,
+        comprender las especificaciones y encontrar los materiales adecuados.
+      </p>
+      <a class="btn btn-blue" href="#categorias">Explorar contenidos y equipos</a>
+    </div>
+
+    <img loading="lazy"
+      alt="Paneles solares en un entorno natural"
+      src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80">
+  </div>
 </section>
+
+<section class="section" id="contacto">
+  <h2>Contacto y sugerencias</h2>
+  <p>
+    ¿Qué equipos o temas técnicos te gustaría encontrar en EnerVanty?
+    Puedes escribirnos cuando esté configurado el correo oficial del sitio.
+  </p>
+  <p class="muted">
+    Próxima mejora: conectar este apartado con el correo de contacto
+    y habilitar un formulario funcional.
+  </p>
+</section>
+
 </main>
 
-<footer id="nosotros">
-<div class="wrap">
-<a class="brand" href="#inicio">Ener<span>Vanty</span></a>
-<p>Revista comercial y catálogo de energía, tecnología y soluciones.</p>
-<p>Los productos, precios y disponibilidad dependen de cada comercio. Verifica siempre la información del vendedor.</p>
-<p>© <span id="year"></span> EnerVanty</p>
-</div>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="logo-name" style="color:white">
+        Ener<span>Vanty</span>
+      </div>
+      <p>Energía hoy, un mejor mañana.</p>
+      <p>Revista comercial y catálogo de energía solar y equipos eléctricos.</p>
+    </div>
+
+    <div>
+      <h3>Explorar</h3>
+      <p><a href="#categorias">Categorías</a></p>
+      <p><a href="#productos">Productos</a></p>
+      <p><a href="#revista">Revista</a></p>
+    </div>
+
+    <div>
+      <h3>Tiendas</h3>
+      <p><a href="#tiendas">Amazon.es</a></p>
+      <p><a href="#tiendas">eBay · Próximamente</a></p>
+      <p><a href="#tiendas">Alibaba · Próximamente</a></p>
+    </div>
+  </div>
+
+  <div class="disclosure">
+    Algunos enlaces de Amazon.es son enlaces de afiliado. EnerVanty
+    puede recibir una comisión por compras que cumplan las condiciones
+    del programa, sin coste adicional para el comprador.
+    Los precios, disponibilidad y especificaciones se consultan en la tienda.
+    <br><br>
+    © <span id="anio"></span> EnerVanty. Todos los derechos reservados.
+  </div>
 </footer>
 
 <script>
-function showStore(store){
-  const stores=['amazon','ebay','alibaba'];
-  stores.forEach(function(name){
-    const active=name===store;
-    document.getElementById('panel-'+name).hidden=!active;
-    document.getElementById('tab-'+name).setAttribute('aria-selected',String(active));
-  });
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+function buscarProductos() {
+  const campo = document.getElementById("busqueda");
+  const termino = campo.value.trim();
+
+  if (!termino) {
+    campo.focus();
+    return;
+  }
+
+  const url = "https://www.amazon.es/s?" +
+    "k=" + encodeURIComponent(termino) +
+    "&tag=enervanty21-21";
+
+  window.open(url, "_blank", "noopener");
 }
-document.getElementById('year').textContent=new Date().getFullYear();
+
+function mostrarTienda(tienda, boton) {
+  document.querySelectorAll(".market-tab").forEach(function(tab) {
+    tab.classList.remove("active");
+    tab.setAttribute("aria-selected", "false");
+  });
+
+  boton.classList.add("active");
+  boton.setAttribute("aria-selected", "true");
+
+  const panel = document.getElementById("panel-tienda");
+
+  if (tienda === "amazon") {
+    panel.innerHTML = `
+      <h3>Encuentra equipos en Amazon.es</h3>
+      <p>Explora productos de energía solar y materiales eléctricos.</p>
+      <a class="btn btn-amazon"
+        href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
+        target="_blank" rel="sponsored nofollow noopener">
+        Visitar Amazon.es →
+      </a>`;
+  } else if (tienda === "ebay") {
+    panel.innerHTML = `
+      <span class="status">En preparación</span>
+      <h3>Próximamente: eBay</h3>
+      <p>Estamos preparando esta sección para incorporar enlaces
+      comerciales cuando la afiliación esté disponible.</p>`;
+  } else if (tienda === "alibaba") {
+    panel.innerHTML = `
+      <span class="status">En preparación</span>
+      <h3>Próximamente: Alibaba</h3>
+      <p>Estamos preparando esta sección para futuras compras
+      de equipos y materiales de proveedores internacionales.</p>`;
+  }
+}
 </script>
+
 </body>
 </html>
