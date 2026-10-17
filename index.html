@@ -1,393 +1,166 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="EnerVanty: revista comercial de energía solar, equipos eléctricos, baterías, inversores y materiales para instalaciones fotovoltaicas.">
-<title>EnerVanty | Energía solar y equipos eléctricos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10345d">
+<meta name="description" content="EnerVanty: revista profesional de energía solar, calculadora fotovoltaica, informes energéticos y conexión con profesionales cualificados.">
+<title>EnerVanty | Revista y soluciones energéticas</title>
 
 <style>
-:root {
+:root{
   --azul:#10345d;
   --azul2:#0759b8;
-  --verde:#39a85a;
-  --naranja:#ffb51b;
-  --fondo:#f5f8fb;
-  --texto:#18324e;
-  --borde:#e2e9f0;
+  --verde:#299b50;
+  --naranja:#ffbd39;
+  --fondo:#f4f7fa;
+  --texto:#20364b;
+  --borde:#dfe7ef;
+  --blanco:#fff;
 }
-
-* { box-sizing:border-box; }
-
-html { scroll-behavior:smooth; }
-
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--texto);
-  background:#fff;
-  line-height:1.5;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);background:#fff;line-height:1.6
 }
-
-a { color:inherit; text-decoration:none; }
-
-button { font:inherit; cursor:pointer; }
-
-header {
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#fff;
-  border-bottom:1px solid var(--borde);
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:auto;padding:0 20px}
+header{
+  position:sticky;top:0;z-index:20;background:#fff;
+  border-bottom:1px solid var(--borde)
 }
-
-.topbar {
-  max-width:1240px;
-  margin:auto;
-  padding:13px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
+.topbar{
+  max-width:1200px;margin:auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap
 }
-
-.logo {
-  display:flex;
-  align-items:center;
-  gap:9px;
-  flex-shrink:0;
-}
-
-.logo-icon { font-size:37px; }
-
-.logo-name {
-  font-size:29px;
-  font-weight:800;
-  letter-spacing:-1px;
-  color:var(--azul);
-}
-
-.logo-name span { color:var(--verde); }
-
-.tagline {
-  font-size:11px;
-  color:#65778b;
-  margin-top:-3px;
-}
-
-nav {
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:18px;
-  flex-wrap:wrap;
-  font-size:13px;
-  font-weight:600;
-}
-
-nav a:hover { color:var(--verde); }
-
-.hero {
-  min-height:440px;
-  display:flex;
-  align-items:center;
-  color:white;
+.logo{display:flex;align-items:center;gap:9px}
+.logo-icon{font-size:36px}
+.logo-name{font-size:27px;font-weight:800;letter-spacing:-1px;color:var(--azul)}
+.logo-name span{color:var(--verde)}
+.tagline{font-size:11px;color:#64778b;margin-top:-4px}
+nav{display:flex;gap:15px;flex-wrap:wrap;font-size:13px;font-weight:700}
+nav a:hover{color:var(--verde)}
+.hero{
+  min-height:460px;display:flex;align-items:center;color:white;
   background:
-    linear-gradient(90deg,rgba(5,22,40,.88) 0%,
-    rgba(5,22,40,.60) 42%,rgba(5,22,40,.08) 100%),
-    url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1800&q=85")
-    center 55%/cover no-repeat;
+  linear-gradient(90deg,rgba(5,22,40,.92),rgba(5,22,40,.68) 48%,rgba(5,22,40,.12)),
+  url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1800&q=85")
+  center 55%/cover no-repeat
 }
-
-.hero-content {
-  max-width:1240px;
-  width:100%;
-  margin:auto;
-  padding:65px 24px;
+.hero-content{max-width:1200px;width:100%;margin:auto;padding:60px 24px}
+.hero-content>*{max-width:650px}
+.eyebrow{
+  color:#baf19b;text-transform:uppercase;font-size:12px;
+  font-weight:800;letter-spacing:2px
 }
-
-.hero-content > * { max-width:570px; }
-
-.eyebrow {
-  color:#b9f18c;
-  text-transform:uppercase;
-  font-weight:700;
-  font-size:12px;
-  letter-spacing:2px;
+h1{font-size:clamp(34px,5vw,57px);line-height:1.08;letter-spacing:-1px;margin:15px 0}
+.hero p{font-size:17px;color:#f0f5fa}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:8px;padding:12px 17px;border:0;border-radius:9px;
+  font-weight:700;text-align:center;transition:transform .2s;
+  margin:4px 3px 4px 0
 }
-
-h1 {
-  font-size:clamp(35px,5vw,58px);
-  line-height:1.08;
-  letter-spacing:-1.5px;
-  margin:15px 0;
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--verde);color:#fff}
+.btn-blue{background:var(--azul2);color:white}
+.btn-yellow{background:var(--naranja);color:#17324c}
+.btn-light{background:white;color:var(--azul);border:1px solid var(--borde)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:3px solid #80bfff;outline-offset:2px
 }
-
-.hero p {
-  font-size:17px;
-  color:#f0f5fa;
-  margin:0 0 26px;
+.section{padding:42px 0}
+.section-head{margin-bottom:22px}
+h2{font-size:clamp(24px,3vw,32px);line-height:1.2;color:var(--azul);margin:0 0 9px}
+h3{color:var(--azul);margin:0 0 9px;line-height:1.35}
+p{margin-top:7px}
+.muted{color:#687b8e}
+.small{font-size:12px}
+.grid{display:grid;gap:17px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{
+  background:white;border:1px solid var(--borde);
+  border-radius:14px;overflow:hidden;min-width:0
 }
-
-.btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  padding:13px 19px;
-  border-radius:9px;
-  font-weight:700;
-  border:0;
-  transition:transform .2s,opacity .2s;
+.card-body{padding:19px}
+.card-img{width:100%;height:175px;object-fit:cover}
+.icon{font-size:29px;margin-bottom:8px}
+.tag{
+  display:inline-block;padding:4px 9px;border-radius:30px;
+  background:#e8f6ec;color:#206f3b;font-size:11px;font-weight:800
 }
-
-.btn:hover { transform:translateY(-2px); opacity:.92; }
-
-.btn-amazon { background:var(--naranja); color:#142c49; }
-
-.btn-blue { background:var(--azul2); color:white; }
-
-.btn-outline {
-  border:1px solid var(--borde);
-  background:#fff;
-  color:var(--azul);
+.callout{background:var(--fondo);border-radius:15px;padding:24px}
+.dark-panel{background:var(--azul);color:white;border-radius:15px;padding:25px}
+.dark-panel h2,.dark-panel h3{color:white}
+.dark-panel p{color:#e0eaf4}
+.calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{border:1px solid var(--borde);border-radius:14px;padding:22px;background:#fff}
+label{display:block;font-size:13px;font-weight:700;margin:13px 0 5px}
+input,select,textarea{
+  width:100%;padding:12px;border:1px solid #cbd7e2;
+  border-radius:8px;background:white;color:var(--texto);min-width:0
 }
-
-main { max-width:1240px; margin:auto; padding:0 20px; }
-
-.section { padding:35px 0; }
-
-.section-head {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-  margin-bottom:19px;
+textarea{min-height:100px;resize:vertical}
+.help{font-size:12px;color:#718196;margin:5px 0}
+.result{
+  background:#edf7ef;border-radius:12px;padding:15px;margin-top:12px
 }
-
-h2 {
-  color:var(--azul);
-  font-size:clamp(23px,3vw,31px);
-  line-height:1.2;
-  margin:0 0 7px;
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metric{background:white;border-radius:9px;padding:13px}
+.metric strong{display:block;font-size:23px;color:var(--azul)}
+.metric span{font-size:12px;color:#65788b}
+.notice{
+  border-left:4px solid var(--naranja);padding:12px 14px;
+  background:#fff8e8;border-radius:4px;font-size:13px
 }
-
-.section-head p, .muted { color:#718196; margin:0; }
-
-.categories {
-  display:grid;
-  grid-template-columns:repeat(6,minmax(0,1fr));
-  gap:13px;
+.status{
+  display:inline-block;padding:5px 10px;border-radius:20px;
+  background:#fff0c7;color:#815700;font-size:12px;font-weight:700
 }
-
-.category {
-  display:block;
-  border:1px solid var(--borde);
-  border-radius:11px;
-  overflow:hidden;
-  background:white;
-  transition:transform .2s,box-shadow .2s;
+details{border:1px solid var(--borde);border-radius:10px;padding:14px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:var(--azul)}
+.form-status{margin-top:12px;font-size:13px;font-weight:700}
+footer{background:#102b49;color:white;margin-top:25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px;padding:35px 0}
+footer h3{color:white}
+footer p,footer a{color:#d0dbe7;font-size:13px}
+.footer-bottom{border-top:1px solid #ffffff25;padding:17px 20px;text-align:center;font-size:12px;color:#d0dbe7}
+hr{border:0;border-top:1px solid var(--borde);margin:25px 0}
+@media(max-width:850px){
+  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .calc-layout{grid-template-columns:1fr}
+  .topbar{align-items:flex-start}
+  nav{gap:10px}
 }
-
-.category:hover {
-  transform:translateY(-3px);
-  box-shadow:0 8px 22px #16345112;
-}
-
-.category img {
-  width:100%;
-  height:105px;
-  object-fit:cover;
-  display:block;
-}
-
-.category-label {
-  padding:12px 10px;
-  font-size:13px;
-  font-weight:700;
-}
-
-.category-label span { float:right; color:var(--verde); }
-
-.products {
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:15px;
-}
-
-.product {
-  border:1px solid var(--borde);
-  border-radius:12px;
-  padding:13px;
-  display:flex;
-  flex-direction:column;
-  min-width:0;
-  background:white;
-}
-
-.product img {
-  width:100%;
-  height:155px;
-  object-fit:contain;
-  margin-bottom:12px;
-}
-
-.product h3 {
-  font-size:15px;
-  margin:0 0 8px;
-  color:var(--azul);
-}
-
-.product p {
-  font-size:12px;
-  color:#728197;
-  margin:0 0 13px;
-}
-
-.product .btn {
-  margin-top:auto;
-  padding:11px 8px;
-  font-size:13px;
-  width:100%;
-}
-
-.market-tabs {
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin:18px 0;
-}
-
-.market-tab {
-  padding:11px 17px;
-  border:1px solid var(--borde);
-  background:#fff;
-  color:var(--azul);
-  border-radius:9px;
-  font-weight:700;
-}
-
-.market-tab.active {
-  background:var(--azul);
-  color:#fff;
-  border-color:var(--azul);
-}
-
-.market-panel {
-  border:1px solid var(--borde);
-  border-radius:13px;
-  padding:25px;
-  background:#fff;
-}
-
-.market-panel h3 { margin-top:0; color:var(--azul); }
-
-.status {
-  display:inline-block;
-  padding:5px 10px;
-  border-radius:20px;
-  background:#fff0c7;
-  color:#815700;
-  font-size:12px;
-  font-weight:700;
-}
-
-.editorial {
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:28px;
-  align-items:center;
-  background:var(--fondo);
-  border-radius:15px;
-  padding:28px;
-}
-
-.editorial img {
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:11px;
-}
-
-.editorial p { color:#63758a; }
-
-.searchbar {
-  display:flex;
-  gap:8px;
-  width:min(100%,430px);
-}
-
-.searchbar input {
-  min-width:0;
-  flex:1;
-  padding:12px;
-  border:1px solid var(--borde);
-  border-radius:9px;
-  font-size:14px;
-}
-
-footer {
-  margin-top:30px;
-  background:#102b49;
-  color:white;
-}
-
-.footer-inner {
-  max-width:1240px;
-  margin:auto;
-  padding:35px 20px;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:25px;
-}
-
-footer p, footer a { color:#d0dbe7; font-size:13px; }
-
-footer h3 { margin-top:0; }
-
-.disclosure {
-  border-top:1px solid #ffffff25;
-  padding:15px 20px;
-  text-align:center;
-  color:#d0dbe7;
-  font-size:11px;
-}
-
-@media(max-width:900px) {
-  .topbar { align-items:flex-start; flex-direction:column; }
-  nav { justify-content:flex-start; gap:12px; }
-  .categories { grid-template-columns:repeat(3,minmax(0,1fr)); }
-  .products { grid-template-columns:repeat(2,minmax(0,1fr)); }
-}
-
-@media(max-width:520px) {
-  .topbar { padding:12px 15px; }
-  .logo-name { font-size:26px; }
-  nav { font-size:12px; gap:10px 14px; }
-  .hero { min-height:410px; background-position:58% center; }
-  .hero-content { padding:45px 18px; }
-  .hero p { font-size:15px; }
-  main { padding:0 13px; }
-  .section { padding:27px 0; }
-  .categories { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-  .category img { height:100px; }
-  .products { gap:10px; }
-  .product { padding:10px; }
-  .product img { height:115px; }
-  .product h3 { font-size:13px; }
-  .product .btn { font-size:12px; }
-  .section-head { align-items:flex-start; flex-direction:column; }
-  .editorial { grid-template-columns:1fr; padding:17px; }
-  .editorial img { height:190px; }
-  .footer-inner { grid-template-columns:1fr; gap:12px; }
-  .market-panel { padding:17px; }
+@media(max-width:540px){
+  .wrap{padding:0 14px}
+  .topbar{padding:11px 14px}
+  .logo-name{font-size:25px}
+  nav{font-size:12px;gap:8px 12px}
+  .hero{min-height:420px;background-position:60% center}
+  .hero-content{padding:43px 17px}
+  .hero p{font-size:15px}
+  .section{padding:30px 0}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .card-img{height:195px}
+  .panel,.card-body{padding:16px}
+  .footer-grid{grid-template-columns:1fr;gap:8px}
+  .result-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="topbar">
     <a class="logo" href="#inicio" aria-label="EnerVanty, inicio">
@@ -397,338 +170,602 @@ footer h3 { margin-top:0; }
         <div class="tagline">Energía hoy, un mejor mañana</div>
       </div>
     </a>
-
     <nav aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a>
-      <a href="#categorias">Energía solar</a>
-      <a href="#productos">Equipos eléctricos</a>
-      <a href="#tiendas">Tiendas</a>
       <a href="#revista">Revista</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#informes">Informes</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#profesionales">Profesionales</a>
+      <a href="#proveedores">Proveedores</a>
     </nav>
   </div>
 </header>
 
 <section class="hero" id="inicio">
   <div class="hero-content">
-    <div class="eyebrow">Tecnología · Energía · Futuro</div>
-    <h1>Soluciones en energía solar y equipos eléctricos</h1>
+    <div class="eyebrow">Energía · Ingeniería · Soluciones</div>
+    <h1>Decisiones energéticas con criterio profesional</h1>
     <p>
-      Descubre equipos, compara alternativas y encuentra materiales
-      para construir un futuro energético más eficiente y sostenible.
+      Información técnica, cálculos preliminares y conexión con profesionales
+      para encontrar soluciones solares y eléctricas adaptadas a cada proyecto.
     </p>
-    <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=paneles+solares&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">
-      Ver productos en Amazon.es →
-    </a>
+    <a class="btn btn-yellow" href="#calculadora">Calcular mi sistema →</a>
+    <a class="btn btn-light" href="#servicios">Solicitar una solución</a>
   </div>
 </section>
 
-<main>
+<main class="wrap">
 
-<section class="section" id="categorias">
-  <div class="section-head">
-    <div>
-      <h2>Explora nuestras categorías</h2>
-      <p>Encuentra los equipos que necesitas para tu proyecto.</p>
-    </div>
-  </div>
-
-  <div class="categories">
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Paneles solares"
-      src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Paneles solares <span>→</span></div>
+<section class="section">
+  <div class="grid grid-3">
+    <a class="card" href="#calculadora">
+      <div class="card-body">
+        <div class="icon">☀️</div>
+        <h3>Calcula tu sistema</h3>
+        <p class="muted">Obtén una primera estimación de paneles, inversor y batería.</p>
+        <strong>Empezar →</strong>
+      </div>
     </a>
-
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Instalación de inversores"
-      src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Inversores <span>→</span></div>
+    <a class="card" href="#informes">
+      <div class="card-body">
+        <div class="icon">📋</div>
+        <h3>Informe energético</h3>
+        <p class="muted">Organiza tus necesidades y solicita un análisis técnico preliminar.</p>
+        <strong>Conocer el servicio →</strong>
+      </div>
     </a>
-
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Baterías para energía"
-      src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Baterías <span>→</span></div>
+    <a class="card" href="#servicios">
+      <div class="card-body">
+        <div class="icon">🤝</div>
+        <h3>Encontrar profesionales</h3>
+        <p class="muted">Solicita propuestas a profesionales y empresas independientes.</p>
+        <strong>Presentar proyecto →</strong>
+      </div>
     </a>
-
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Material eléctrico"
-      src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Protección eléctrica <span>→</span></div>
-    </a>
-
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Cables eléctricos"
-      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Conectores y cables <span>→</span></div>
-    </a>
-
-    <a class="category" href="#productos">
-      <img loading="lazy" alt="Instalación de paneles"
-      src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=500&q=75">
-      <div class="category-label">Estructuras <span>→</span></div>
-    </a>
-  </div>
-</section>
-
-<section class="section" id="productos">
-  <div class="section-head">
-    <div>
-      <h2>Productos destacados</h2>
-      <p>Explora opciones disponibles en Amazon.es.</p>
-    </div>
-    <a class="btn btn-blue"
-       href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">
-       Ver más en Amazon.es →
-    </a>
-  </div>
-
-  <div class="searchbar">
-    <input id="busqueda" type="search"
-      placeholder="Buscar paneles, baterías, inversores..."
-      aria-label="Buscar productos">
-    <button class="btn btn-blue" onclick="buscarProductos()">Buscar</button>
-  </div>
-
-  <p class="muted" style="font-size:12px;margin:10px 0 18px">
-    Las búsquedas se realizan en Amazon.es. Verifica las especificaciones
-    y el precio vigente antes de comprar.
-  </p>
-
-  <div class="products">
-    <article class="product">
-      <img loading="lazy" alt="Panel fotovoltaico"
-       src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=75">
-      <h3>Paneles solares fotovoltaicos</h3>
-      <p>Opciones para instalaciones residenciales y comerciales.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=panel+solar+fotovoltaico&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Equipo inversor"
-       src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
-      <h3>Inversores solares</h3>
-      <p>Compara potencia, tensión de entrada y características.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=inversor+solar+hibrido&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Sistema de almacenamiento"
-       src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=500&q=75">
-      <h3>Baterías solares</h3>
-      <p>Explora alternativas de almacenamiento de energía.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=bateria+solar+LiFePO4&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Accesorios para instalaciones solares"
-       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
-      <h3>Conectores y accesorios</h3>
-      <p>Materiales para conexiones y montaje fotovoltaico.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=conectores+solares+MC4&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Cable eléctrico"
-       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=75">
-      <h3>Cables para energía solar</h3>
-      <p>Busca conductores y accesorios según tu instalación.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=cable+solar+fotovoltaico&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Equipos de protección eléctrica"
-       src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=75">
-      <h3>Protecciones eléctricas</h3>
-      <p>Explora interruptores, fusibles y protecciones DC.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=proteccion+electrica+solar+DC&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Herramientas eléctricas"
-       src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=500&q=75">
-      <h3>Herramientas de instalación</h3>
-      <p>Herramientas y accesorios para trabajos eléctricos.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=herramientas+instalacion+solar&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-
-    <article class="product">
-      <img loading="lazy" alt="Accesorios para montaje fotovoltaico"
-       src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=500&q=75">
-      <h3>Estructuras y soportes</h3>
-      <p>Soluciones de montaje para distintas superficies.</p>
-      <a class="btn btn-amazon"
-       href="https://www.amazon.es/s?k=estructura+montaje+panel+solar&tag=enervanty21-21"
-       target="_blank" rel="sponsored nofollow noopener">Ver en Amazon.es</a>
-    </article>
-  </div>
-</section>
-
-<section class="section" id="tiendas">
-  <h2>Nuestras tiendas asociadas</h2>
-  <p class="muted">Estamos construyendo una plataforma comercial multimarca.</p>
-
-  <div class="market-tabs" role="tablist" aria-label="Tiendas">
-    <button class="market-tab active" role="tab"
-      aria-selected="true" onclick="mostrarTienda('amazon',this)">Amazon.es</button>
-    <button class="market-tab" role="tab"
-      aria-selected="false" onclick="mostrarTienda('ebay',this)">eBay</button>
-    <button class="market-tab" role="tab"
-      aria-selected="false" onclick="mostrarTienda('alibaba',this)">Alibaba</button>
-  </div>
-
-  <div class="market-panel" id="panel-tienda" aria-live="polite">
-    <h3>Encuentra equipos en Amazon.es</h3>
-    <p>Explora productos de energía solar y materiales eléctricos.</p>
-    <a class="btn btn-amazon"
-      href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
-      target="_blank" rel="sponsored nofollow noopener">Visitar Amazon.es →</a>
   </div>
 </section>
 
 <section class="section" id="revista">
-  <div class="editorial">
-    <div>
-      <div class="eyebrow" style="color:var(--verde)">Revista EnerVanty</div>
-      <h2>Conocimiento para decidir mejor</h2>
-      <p>
-        Información práctica sobre energía solar, eficiencia energética,
-        selección de equipos y criterios técnicos para tus proyectos.
-      </p>
-      <p>
-        Nuestro objetivo es ayudarte a comparar alternativas con criterio,
-        comprender las especificaciones y encontrar los materiales adecuados.
-      </p>
-      <a class="btn btn-blue" href="#categorias">Explorar contenidos y equipos</a>
-    </div>
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--verde)">Revista EnerVanty</div>
+    <h2>Conocimiento para decidir mejor</h2>
+    <p class="muted">Contenido práctico para hogares, comercios, industrias y profesionales.</p>
+  </div>
 
-    <img loading="lazy"
-      alt="Paneles solares en un entorno natural"
-      src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80">
+  <div class="grid grid-3">
+    <article class="card">
+      <img class="card-img" loading="lazy"
+        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
+        alt="Paneles solares fotovoltaicos">
+      <div class="card-body">
+        <span class="tag">Guía técnica</span>
+        <h3>¿Cuántos paneles solares necesita una vivienda?</h3>
+        <p class="muted">Consumo diario, horas solares, pérdidas y superficie disponible.</p>
+        <details>
+          <summary>Leer introducción</summary>
+          <p>El número de paneles depende del consumo, la radiación solar del lugar,
+          la orientación, las sombras y las pérdidas del sistema. La potencia del
+          panel por sí sola no determina el rendimiento de una instalación.</p>
+          <p>Empieza por reunir tus facturas eléctricas y calcular el consumo diario.
+          Después utiliza nuestra calculadora como orientación inicial.</p>
+          <a href="#calculadora">Ir a la calculadora →</a>
+        </details>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card-img" loading="lazy"
+        src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+        alt="Equipos de almacenamiento de energía">
+      <div class="card-body">
+        <span class="tag">Almacenamiento</span>
+        <h3>Cómo dimensionar una batería solar</h3>
+        <p class="muted">Autonomía, capacidad útil, profundidad de descarga y eficiencia.</p>
+        <details>
+          <summary>Leer introducción</summary>
+          <p>La batería debe dimensionarse según la energía que se consumirá durante
+          la autonomía deseada. También importan la profundidad de descarga permitida,
+          las pérdidas, la temperatura y la potencia que puede entregar.</p>
+          <p>Una batería más grande no siempre es la mejor solución: debe responder al
+          uso real y ser compatible con el inversor.</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card-img" loading="lazy"
+        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+        alt="Equipamiento eléctrico">
+      <div class="card-body">
+        <span class="tag">Seguridad eléctrica</span>
+        <h3>Por qué las protecciones no son opcionales</h3>
+        <p class="muted">Conductores, fusibles, interruptores y protección contra sobretensiones.</p>
+        <details>
+          <summary>Leer introducción</summary>
+          <p>Las protecciones se seleccionan considerando las corrientes de servicio
+          y de fallo, la tensión, las características del equipo y las condiciones
+          de instalación. Una selección incorrecta puede generar riesgos eléctricos
+          y daños materiales.</p>
+          <p>El diseño final debe revisarlo un profesional cualificado conforme a la
+          normativa aplicable en el lugar del proyecto.</p>
+        </details>
+      </div>
+    </article>
+  </div>
+
+  <div class="callout" style="margin-top:20px">
+    <h3>España y Venezuela: dos contextos energéticos</h3>
+    <p>La revista prioriza soluciones y normativa aplicable en España. También
+    publicará contenidos educativos sobre energía solar en Venezuela, distinguiendo
+    las condiciones locales, las tarifas y las normas de cada país.</p>
   </div>
 </section>
 
-<section class="section" id="contacto">
-  <h2>Contacto y sugerencias</h2>
-  <p>
-    ¿Qué equipos o temas técnicos te gustaría encontrar en EnerVanty?
-    Puedes escribirnos cuando esté configurado el correo oficial del sitio.
-  </p>
-  <p class="muted">
-    Próxima mejora: conectar este apartado con el correo de contacto
-    y habilitar un formulario funcional.
-  </p>
+<section class="section" id="calculadora">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--verde)">Herramienta gratuita</div>
+    <h2>Calculadora solar preliminar</h2>
+    <p class="muted">Introduce tus necesidades para obtener una estimación orientativa.</p>
+  </div>
+
+  <div class="calc-layout">
+    <div class="panel">
+      <h3>1. Datos de consumo</h3>
+      <label for="consumo">Consumo diario (kWh/día)</label>
+      <input id="consumo" type="number" min="0.1" max="100000" step="0.1" value="10">
+      <p class="help">Puedes estimarlo a partir de tus facturas eléctricas.</p>
+
+      <label for="sol">Horas solares pico diarias estimadas</label>
+      <input id="sol" type="number" min="1" max="9" step="0.1" value="4.5">
+      <p class="help">Este valor cambia según ubicación, estación y orientación.</p>
+
+      <label for="perdidas">Factor de rendimiento global (%)</label>
+      <input id="perdidas" type="number" min="40" max="95" step="1" value="75">
+      <p class="help">Incluye pérdidas aproximadas del sistema; el valor real varía.</p>
+
+      <label for="panel">Potencia de cada panel (W)</label>
+      <input id="panel" type="number" min="100" max="1000" step="10" value="450">
+
+      <label for="autonomia">Autonomía de batería deseada (días)</label>
+      <input id="autonomia" type="number" min="0" max="7" step="0.5" value="1">
+
+      <label for="descarga">Profundidad de descarga permitida (%)</label>
+      <input id="descarga" type="number" min="30" max="95" step="5" value="80">
+
+      <label for="eficiencia">Eficiencia de batería y conversión (%)</label>
+      <input id="eficiencia" type="number" min="70" max="98" step="1" value="90">
+
+      <button class="btn btn-primary" style="width:100%;margin-top:18px"
+        type="button" onclick="calcularSolar()">Calcular estimación</button>
+    </div>
+
+    <div class="panel">
+      <h3>2. Resultados orientativos</h3>
+      <p class="muted small">Los resultados se calculan en tu navegador; no se envían a ningún servidor.</p>
+
+      <div id="resultado" class="result" aria-live="polite">
+        <p>Introduce tus datos y pulsa «Calcular estimación».</p>
+      </div>
+
+      <div class="notice" style="margin-top:18px">
+        <strong>Importante:</strong> esto no es un diseño eléctrico definitivo ni
+        una garantía de producción. No calcula automáticamente sombras, orientación,
+        radiación horaria, picos de arranque, tensiones de cadena, límites MPPT,
+        caída de tensión o selección normativa de protecciones.
+      </div>
+
+      <a class="btn btn-blue" style="margin-top:15px" href="#informes">
+        Solicitar informe energético →
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="informes">
+  <div class="grid grid-2">
+    <div>
+      <div class="eyebrow" style="color:var(--verde)">Servicio técnico</div>
+      <h2>Informe energético preliminar</h2>
+      <p>Un análisis estructurado de tus necesidades para comprender alternativas,
+      estimar el tamaño del sistema y preparar el siguiente paso.</p>
+      <ul>
+        <li>Revisión de los datos que proporciones.</li>
+        <li>Estimación preliminar de potencia y almacenamiento.</li>
+        <li>Recomendaciones y alternativas técnicas.</li>
+        <li>Supuestos, limitaciones y próximos pasos.</li>
+      </ul>
+      <div class="callout">
+        <strong>Precio piloto propuesto: 19 €</strong>
+        <p class="small muted">Importe orientativo sujeto a definición del alcance y
+        revisión fiscal. El cobro aún no está habilitado.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Solicitar información sobre el informe</h3>
+      <p class="muted small">Formulario de demostración: todavía no transmite datos.</p>
+      <form onsubmit="return formularioDemo(event,'estadoInforme')">
+        <label for="iNombre">Nombre</label>
+        <input id="iNombre" name="nombre" required maxlength="100" autocomplete="name">
+
+        <label for="iCorreo">Correo electrónico</label>
+        <input id="iCorreo" name="correo" type="email" required maxlength="150" autocomplete="email">
+
+        <label for="iPais">País del proyecto</label>
+        <select id="iPais" name="pais" required>
+          <option value="">Seleccionar</option>
+          <option>España</option>
+          <option>Venezuela</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="iTipo">Tipo de necesidad</label>
+        <select id="iTipo" name="tipo" required>
+          <option value="">Seleccionar</option>
+          <option>Vivienda</option>
+          <option>Comercio</option>
+          <option>Industria</option>
+          <option>Explotación agropecuaria</option>
+          <option>Sistema aislado</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="iDetalle">Describe brevemente tu necesidad</label>
+        <textarea id="iDetalle" name="detalle" maxlength="1500" required></textarea>
+
+        <label style="display:flex;gap:9px;align-items:flex-start;font-weight:400">
+          <input type="checkbox" required style="width:auto;margin-top:5px">
+          <span>He leído el aviso de demostración y entiendo que este formulario todavía no envía mis datos.</span>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Preparar solicitud</button>
+        <div id="estadoInforme" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="servicios">
+  <div class="section-head">
+    <div class="eyebrow" style="color:var(--verde)">Proyectos y contratación</div>
+    <h2>Encuentra una solución para tu proyecto</h2>
+    <p class="muted">EnerVanty conecta a clientes con profesionales y empresas independientes.</p>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="card"><div class="card-body">
+      <div class="icon">🏠</div>
+      <h3>Viviendas</h3>
+      <p class="muted">Autoconsumo, respaldo eléctrico, baterías y eficiencia energética.</p>
+    </div></div>
+    <div class="card"><div class="card-body">
+      <div class="icon">🏢</div>
+      <h3>Comercios e industrias</h3>
+      <p class="muted">Reducción de consumo, análisis de demanda y soluciones fotovoltaicas.</p>
+    </div></div>
+    <div class="card"><div class="card-body">
+      <div class="icon">🌱</div>
+      <h3>Proyectos especiales</h3>
+      <p class="muted">Bombeo solar, almacenamiento y aplicaciones agropecuarias.</p>
+    </div></div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:20px">
+    <div class="dark-panel">
+      <h3>¿Cómo funciona la intermediación?</h3>
+      <p>Recibimos la solicitud, buscamos profesionales adecuados y recopilamos
+      propuestas cuando sea viable. El cliente evalúa y elige. El profesional
+      contratado ejecuta y factura directamente al cliente.</p>
+      <p>La remuneración de EnerVanty por intermediación se pactará por separado
+      con el profesional, con condiciones transparentes.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Presentar un proyecto</h3>
+      <p class="muted small">Prototipo de formulario; aún no transmite solicitudes.</p>
+      <form onsubmit="return formularioDemo(event,'estadoProyecto')">
+        <label for="pNombre">Nombre</label>
+        <input id="pNombre" name="nombre" required maxlength="100">
+
+        <label for="pCorreo">Correo electrónico</label>
+        <input id="pCorreo" name="correo" type="email" required maxlength="150">
+
+        <label for="pPais">País</label>
+        <select id="pPais" name="pais" required>
+          <option value="">Seleccionar</option>
+          <option>España</option>
+          <option>Venezuela</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="pServicio">Servicio que necesitas</label>
+        <select id="pServicio" name="servicio" required>
+          <option value="">Seleccionar</option>
+          <option>Instalación solar</option>
+          <option>Baterías y respaldo</option>
+          <option>Estudio técnico</option>
+          <option>Mantenimiento</option>
+          <option>Bombeo solar</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="pPresupuesto">Presupuesto aproximado (opcional)</label>
+        <select id="pPresupuesto" name="presupuesto">
+          <option value="">Prefiero definirlo después</option>
+          <option>Menos de 1.000 €</option>
+          <option>1.000–5.000 €</option>
+          <option>5.000–15.000 €</option>
+          <option>Más de 15.000 €</option>
+          <option>Necesito orientación</option>
+        </select>
+
+        <label for="pDetalle">Descripción del proyecto</label>
+        <textarea id="pDetalle" name="detalle" maxlength="2000" required></textarea>
+
+        <label style="display:flex;gap:9px;align-items:flex-start;font-weight:400">
+          <input type="checkbox" required style="width:auto;margin-top:5px">
+          <span>Entiendo que este formulario de prueba no transmite mis datos.</span>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Preparar solicitud</button>
+        <div id="estadoProyecto" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="profesionales">
+  <div class="grid grid-2">
+    <div>
+      <div class="eyebrow" style="color:var(--verde)">Red profesional</div>
+      <h2>Profesionales y empresas colaboradoras</h2>
+      <p>Buscamos ingenieros, instaladores, técnicos eléctricos, especialistas
+      fotovoltaicos y empresas con experiencia demostrable.</p>
+      <h3>Estados de la red</h3>
+      <p><span class="status">Pendiente de revisión</span> Documentación por revisar.</p>
+      <p><span class="tag">Verificado y activo</span> Habilitado para recibir solicitudes según su especialidad.</p>
+      <p><span class="status">Verificado y pausado</span> No recibe nuevos encargos temporalmente.</p>
+      <p class="muted small">La verificación solo podrá asignarse después de comprobar
+      credenciales y documentación. En esta versión no existe todavía un sistema
+      real de verificación.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Manifestar interés profesional</h3>
+      <p class="muted small">El registro real se habilitará cuando exista almacenamiento seguro.</p>
+      <form onsubmit="return formularioDemo(event,'estadoProfesional')">
+        <label for="tNombre">Nombre o razón profesional</label>
+        <input id="tNombre" name="nombre" required maxlength="150">
+
+        <label for="tCorreo">Correo de contacto</label>
+        <input id="tCorreo" name="correo" type="email" required maxlength="150">
+
+        <label for="tPais">País de operación</label>
+        <select id="tPais" name="pais" required>
+          <option value="">Seleccionar</option>
+          <option>España</option>
+          <option>Venezuela</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="tPerfil">Perfil profesional</label>
+        <select id="tPerfil" name="perfil" required>
+          <option value="">Seleccionar</option>
+          <option>Ingeniería eléctrica</option>
+          <option>Ingeniería energética</option>
+          <option>Instalación fotovoltaica</option>
+          <option>Electricidad y mantenimiento</option>
+          <option>Empresa instaladora</option>
+          <option>Otro</option>
+        </select>
+
+        <label for="tExperiencia">Experiencia y zona de cobertura</label>
+        <textarea id="tExperiencia" name="experiencia" maxlength="1500" required></textarea>
+
+        <label style="display:flex;gap:9px;align-items:flex-start;font-weight:400">
+          <input type="checkbox" required style="width:auto;margin-top:5px">
+          <span>Entiendo que este formulario es demostrativo y no registra mi solicitud.</span>
+        </label>
+
+        <button class="btn btn-blue" type="submit">Preparar registro</button>
+        <div id="estadoProfesional" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proveedores">
+  <div class="callout">
+    <div class="grid grid-2">
+      <div>
+        <div class="eyebrow" style="color:var(--verde)">Colaboración comercial</div>
+        <h2>Proveedores y soluciones energéticas</h2>
+        <p>Fabricantes, distribuidores y empresas pueden proponer equipos,
+        fichas técnicas, demostraciones y colaboraciones editoriales.</p>
+        <p>Las publicaciones patrocinadas se identificarán como tales. La inclusión
+        de una marca no implica una certificación ni una recomendación independiente.</p>
+      </div>
+      <div>
+        <h3>¿Representas a un proveedor?</h3>
+        <p class="muted">Puedes preparar una propuesta comercial para su evaluación.</p>
+        <form onsubmit="return formularioDemo(event,'estadoProveedor')">
+          <label for="vNombre">Empresa o proveedor</label>
+          <input id="vNombre" name="empresa" required maxlength="150">
+
+          <label for="vCorreo">Correo profesional</label>
+          <input id="vCorreo" name="correo" type="email" required maxlength="150">
+
+          <label for="vProductos">Productos o soluciones</label>
+          <textarea id="vProductos" name="productos" required maxlength="1500"></textarea>
+
+          <label style="display:flex;gap:9px;align-items:flex-start;font-weight:400">
+            <input type="checkbox" required style="width:auto;margin-top:5px">
+            <span>Entiendo que esta solicitud de demostración no se transmite.</span>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Preparar propuesta</button>
+          <div id="estadoProveedor" class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Cómo trabajamos</h2>
+  <div class="grid grid-3">
+    <div class="card"><div class="card-body">
+      <h3>1. Analizamos la necesidad</h3>
+      <p class="muted">Recopilación de información y orientación preliminar.</p>
+    </div></div>
+    <div class="card"><div class="card-body">
+      <h3>2. Comparamos propuestas</h3>
+      <p class="muted">Cuando haya proveedores disponibles, evaluamos alcance, precio,
+      credenciales, plazos y adecuación técnica.</p>
+    </div></div>
+    <div class="card"><div class="card-body">
+      <h3>3. El cliente confirma el cierre</h3>
+      <p class="muted">El cliente confirma la culminación y expresa su satisfacción.
+      Las incidencias deben revisarse antes de cerrar el expediente.</p>
+    </div></div>
+  </div>
+  <div class="notice" style="margin-top:18px">
+    EnerVanty actúa como intermediario en los proyectos realizados por terceros.
+    El contrato de instalación se formalizará directamente entre el cliente y
+    el profesional o empresa ejecutora. Las condiciones de intermediación y
+    cualquier comisión deberán acordarse expresamente antes del encargo.
+  </div>
+</section>
+
+<section class="section">
+  <div class="panel">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿La calculadora sustituye un estudio técnico?</summary>
+      <p>No. Es una estimación inicial. El diseño definitivo exige datos de
+      ubicación, equipos, condiciones de instalación, normativa y verificaciones técnicas.</p>
+    </details>
+    <details>
+      <summary>¿EnerVanty ejecuta las instalaciones?</summary>
+      <p>El modelo previsto conecta a los clientes con profesionales o empresas
+      independientes. La ejecución y el contrato de obra corresponden al proveedor elegido.</p>
+    </details>
+    <details>
+      <summary>¿Puedo pagar ahora por un informe?</summary>
+      <p>No desde esta versión. El precio mostrado es una propuesta piloto y los
+      cobros solo se activarán después de configurar el proceso de contratación,
+      facturación y pago correspondiente.</p>
+    </details>
+    <details>
+      <summary>¿Los formularios ya envían información?</summary>
+      <p>No. Esta versión no transmite, guarda ni comparte los datos introducidos.
+      Se necesita un backend seguro antes de recibir solicitudes reales.</p>
+    </details>
+  </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="footer-inner">
+  <div class="wrap footer-grid">
     <div>
-      <div class="logo-name" style="color:white">
-        Ener<span>Vanty</span>
-      </div>
+      <div class="logo-name" style="color:white">Ener<span>Vanty</span></div>
       <p>Energía hoy, un mejor mañana.</p>
-      <p>Revista comercial y catálogo de energía solar y equipos eléctricos.</p>
+      <p>Revista profesional, orientación energética y conexión con proveedores
+      y profesionales independientes.</p>
     </div>
-
     <div>
       <h3>Explorar</h3>
-      <p><a href="#categorias">Categorías</a></p>
-      <p><a href="#productos">Productos</a></p>
-      <p><a href="#revista">Revista</a></p>
+      <p><a href="#revista">Revista técnica</a></p>
+      <p><a href="#calculadora">Calculadora solar</a></p>
+      <p><a href="#informes">Informes energéticos</a></p>
     </div>
-
     <div>
-      <h3>Tiendas</h3>
-      <p><a href="#tiendas">Amazon.es</a></p>
-      <p><a href="#tiendas">eBay · Próximamente</a></p>
-      <p><a href="#tiendas">Alibaba · Próximamente</a></p>
+      <h3>Participar</h3>
+      <p><a href="#servicios">Solicitar solución</a></p>
+      <p><a href="#profesionales">Profesionales</a></p>
+      <p><a href="#proveedores">Proveedores</a></p>
     </div>
   </div>
-
-  <div class="disclosure">
-    Algunos enlaces de Amazon.es son enlaces de afiliado. EnerVanty
-    puede recibir una comisión por compras que cumplan las condiciones
-    del programa, sin coste adicional para el comprador.
-    Los precios, disponibilidad y especificaciones se consultan en la tienda.
-    <br><br>
-    © <span id="anio"></span> EnerVanty. Todos los derechos reservados.
+  <div class="footer-bottom">
+    Los cálculos son preliminares y deben validarse técnicamente.
+    EnerVanty no certifica profesionales sin una verificación efectiva.
+    <br>© <span id="anio"></span> EnerVanty. Todos los derechos reservados.
   </div>
 </footer>
 
 <script>
 document.getElementById("anio").textContent = new Date().getFullYear();
 
-function buscarProductos() {
-  const campo = document.getElementById("busqueda");
-  const termino = campo.value.trim();
+function numero(id){
+  return Number(document.getElementById(id).value);
+}
 
-  if (!termino) {
-    campo.focus();
+function calcularSolar(){
+  const consumo = numero("consumo");
+  const sol = numero("sol");
+  const rendimiento = numero("perdidas") / 100;
+  const panelW = numero("panel");
+  const autonomia = numero("autonomia");
+  const descarga = numero("descarga") / 100;
+  const eficiencia = numero("eficiencia") / 100;
+  const resultado = document.getElementById("resultado");
+
+  if(
+    !Number.isFinite(consumo) || consumo <= 0 ||
+    !Number.isFinite(sol) || sol < 1 || sol > 9 ||
+    !Number.isFinite(rendimiento) || rendimiento < .4 || rendimiento > .95 ||
+    !Number.isFinite(panelW) || panelW < 100 || panelW > 1000 ||
+    !Number.isFinite(autonomia) || autonomia < 0 || autonomia > 7 ||
+    !Number.isFinite(descarga) || descarga < .3 || descarga > .95 ||
+    !Number.isFinite(eficiencia) || eficiencia < .7 || eficiencia > .98
+  ){
+    resultado.innerHTML = "<p>Revisa los datos. Introduce valores válidos dentro de los límites indicados.</p>";
     return;
   }
 
-  const url = "https://www.amazon.es/s?" +
-    "k=" + encodeURIComponent(termino) +
-    "&tag=enervanty21-21";
+  const potenciaKW = consumo / (sol * rendimiento);
+  const paneles = Math.ceil((potenciaKW * 1000) / panelW);
+  const potenciaReal = paneles * panelW / 1000;
+  const bateria = autonomia === 0
+    ? 0
+    : consumo * autonomia / (descarga * eficiencia);
 
-  window.open(url, "_blank", "noopener");
+  resultado.innerHTML = `
+    <div class="result-grid">
+      <div class="metric">
+        <strong>${potenciaKW.toFixed(2)} kWp</strong>
+        <span>Potencia fotovoltaica calculada</span>
+      </div>
+      <div class="metric">
+        <strong>${paneles}</strong>
+        <span>Paneles estimados de ${panelW} W</span>
+      </div>
+      <div class="metric">
+        <strong>${potenciaReal.toFixed(2)} kWp</strong>
+        <span>Potencia total con paneles enteros</span>
+      </div>
+      <div class="metric">
+        <strong>${bateria === 0 ? "No incluida" : bateria.toFixed(2)+" kWh"}</strong>
+        <span>Capacidad nominal preliminar de batería</span>
+      </div>
+    </div>
+    <p class="small">Supuestos: ${consumo.toFixed(2)} kWh/día,
+    ${sol.toFixed(1)} horas solares pico y ${Math.round(rendimiento*100)} % de rendimiento.
+    La batería se estima para ${autonomia} día(s) de autonomía.</p>
+    <p class="small"><strong>No se ha dimensionado el inversor ni las protecciones.</strong>
+    Se requiere evaluación técnica antes de comprar o instalar equipos.</p>
+  `;
 }
 
-function mostrarTienda(tienda, boton) {
-  document.querySelectorAll(".market-tab").forEach(function(tab) {
-    tab.classList.remove("active");
-    tab.setAttribute("aria-selected", "false");
-  });
-
-  boton.classList.add("active");
-  boton.setAttribute("aria-selected", "true");
-
-  const panel = document.getElementById("panel-tienda");
-
-  if (tienda === "amazon") {
-    panel.innerHTML = `
-      <h3>Encuentra equipos en Amazon.es</h3>
-      <p>Explora productos de energía solar y materiales eléctricos.</p>
-      <a class="btn btn-amazon"
-        href="https://www.amazon.es/s?k=energia+solar&tag=enervanty21-21"
-        target="_blank" rel="sponsored nofollow noopener">
-        Visitar Amazon.es →
-      </a>`;
-  } else if (tienda === "ebay") {
-    panel.innerHTML = `
-      <span class="status">En preparación</span>
-      <h3>Próximamente: eBay</h3>
-      <p>Estamos preparando esta sección para incorporar enlaces
-      comerciales cuando la afiliación esté disponible.</p>`;
-  } else if (tienda === "alibaba") {
-    panel.innerHTML = `
-      <span class="status">En preparación</span>
-      <h3>Próximamente: Alibaba</h3>
-      <p>Estamos preparando esta sección para futuras compras
-      de equipos y materiales de proveedores internacionales.</p>`;
-  }
+function formularioDemo(event, id){
+  event.preventDefault();
+  const estado = document.getElementById(id);
+  estado.textContent =
+    "Demostración: los datos no se han enviado ni guardado. El formulario requiere conexión segura antes de utilizarse con solicitudes reales.";
+  estado.style.color = "#815700";
+  return false;
 }
 </script>
-
 </body>
 </html>
